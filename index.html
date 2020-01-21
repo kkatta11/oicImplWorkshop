@@ -1,359 +1,1159 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- Published date: September 2019 -->
+        <!-- Template date: September 2019 -->
+        <!-- Put the content ID of this OBE between the empty quotation marks for 'content' below -->
+        <meta name="contentid" content="ERP Cloud Events Lab">
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+        <!-- The title below is displayed on the browser tab, in search results, and in  history. It can be longer than the tutorial title in the <h1> element, below.-->
+		<!-- Use an imperative verb in the title. -->
+        <title>Oracle Integration - ERP Cloud Events Lab</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="robots" content="INDEX, FOLLOW">
+        <meta name="description" content="ERP Cloud Events Lab">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--link rel="stylesheet" href="css/normalize.min.css"-->
+        <!--link rel="stylesheet" href="css/font-awesome.min.css"-->
+        <link rel="stylesheet" href="css/obe-lite.css">
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/jquery-ui-1.10.4.custom.js"></script>
+        <script src="js/jquery.tocify.jd.js"></script>
+        <script src="js/leftnav.js"></script>
+        <script type="text/javascript" src="./js/libs/require/require.js"></script>
+		<script type="text/javascript" src="./js/app.js"></script> 
+		<link rel="stylesheet" href="css/copy-button.css">
+        <script src="js/copytoclipboard.js"></script>  
+        
+    </head>
+    <body>
 
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <!-- Part number: Ennnnn-01 -->
-    <!-- Published date: Month Year -->
-    <!-- Template date: January 29, 2019 -->
-    <!-- Put the content ID of this OBE between the empty quotation marks for 'content' below -->
-    <meta name="contentid" content="">
-    <!-- The title below is displayed on the browser tab, in search results, and in  history. It can be longer than the tutorial title in the <h1> element, below.-->
-    <!-- Use an imperative verb in the title. -->
-    <title>Oracle TechExchange - Oracle Digital Assistant Tutorials Hands-On and Training Material</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="robots" content="INDEX, FOLLOW">
-    <meta name="description" content="Oracle TechExchange - Tutorial and Hands-On">
-    <meta name="description" content="Oracle TechExchange - Tutorial and Hands-On">
-    <meta name="keywords" content="Oracle Digital Assistant, Chatbot, Oracle TechExchange, Tutorial, Conversation, AI, ML, NLP">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/obe-lite.css">
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/jquery-ui-1.10.4.custom.js"></script>
-    <script src="js/jquery.tocify.jd.js"></script>
-    <script src="js/leftnav.js"></script>
-</head>
+        <div id="content" style="margin-top:5px">
 
-<body style="margin-right: 10px">
-    <p>
-        <br> </p>
-    <header>
-        <div class="w1024" style="min-height:55px; display:block;">
-            <a href="https://docs.oracle.com" class="oracle-logo"> <img src="img/oracle_doc_logo.png" alt="Oracle Documentation" style="max-width: none;" width="150" height="22"></a>
-        </div>
-    </header>
-    <!--end header-->
-    <div id="content">
-        <h1><img src="img/obe_tag.png" alt="Oracle by Example branding" align="middle">
-            <meta charset="utf-8">
-            Learning Oracle Digital Assistant<br>
-        </h1>
-        <div class="w1024" style="clear:both; position:relative;
-        margin-top:40px;">
-            <div class="navbackwide border-right">
-                <!-- -->
-            </div>
-            <div id="shownav" title="Show Navigation" tabindex="0"><span class="fa fa-list"></span></div>
-            <div id="sidebar">
-                <!-- -->
-                <div class="left-nav-tut">
-                    <!-- -->
-                    <div id="hidenavw" title="Hide Navigation" tabindex="0"><span class="fa fa-close"></span></div>
-                    <div id="navbar" class="left-nav-w">
-                        <!-- -->
-                        <div id="toc" class="tocify">
-                            <!-- -->
+            <!-- The title below is displayed as the title at the top of the OBE page. It can be shorter than the title in the <title> element, above. -->
+			<!-- Use an imperative verb in the title. -->
+			<h1><img src="img/o.png" align="middle" alt="Oracle">Oracle Integration  - ERP Cloud Events Lab</h1>
+			<img src="img/header2.png" alt="Oracle Documentation" style="max-width: none;" heierght="10px" width="100%"></a>
+
+            <div class="w1024" style="clear:both; position:relative; margin-top:30px;">
+                <div class="navbackwide border-right"><!-- --></div>
+                <div id="shownav" title="Show Navigation" tabindex="0"><span class="fa fa-list"></span></div>
+                <div id="sidebar"><!-- -->
+                    <div class="left-nav-tut"><!-- -->
+                        <div id="hidenavw" title="Hide Navigation" tabindex="0"><span class="fa fa-close"></span></div>
+                        <div  id="navbar" class="left-nav-w"><!-- -->
+                            <div id="toc" class="tocify"><!-- --></div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="bookContainer">
-                <article>
-                    <p class="MsoNormal" style="text-align:justify">
-                        <!--StartFragment-->
-                    </p>
-                    <p style="text-align:justify">This page brings together resources for delivery and uptake of Oracle Digital Assistant. This material is a complete end-to-end leanring library including product features and best practices for developing chatbot skills and digital assistants.</p>
-                    <p>This material can be used as self-paced learning or for delivery to customers, partners and your own development teams.</p>
-                    <section>
-                        <h2><img src="img/32_begin.png" alt="section 0" class="num_circ" width="32" height="32">Complete End-To-End Training<br>
-                        </h2>
-                        <p style="text-align:justify">The following section lists the complete end-to-end training.</p>
-                        <p><b><font color="red">NEW VERSION!: </font> </b>The complete training material has been been updated and extended to cover new features in Oracle Digital Asisstant 19.4.1 and 19.10</p>
-                        <h3>Overview</h3>
-                        <p>This section givens a complete overview of the features of the platform and serves as a primer for those who are new to ODA and are looking for a broad understanding of what it does.</p>
-                        <p>It then includes presentations on understanding the challenges of conversational project and how to design conversations.</p>
-                        <ul>
-                            <li><a href="trainings/completetraining_v2/02/02_01_ODA_Overview_1019.pdf">Oracle Digital Assistant Overview</a></li>
-                            <li><a href="trainings/completetraining_v2/02/02_02_PlanningStage_1019.pdf">Planning and managing a conversational project</a></li>
-                            <li><a href="trainings/completetraining_v2/02/02_03_Introduction_Conversational_Design_1019.pdf">An introduction to conversational design</a></li>
-                            <li><a href="trainings/completetraining_v2/02/02_04_ConversationalUX_1019.pdf">Conversational UX tips and tricks</a></li>
-                            <li style="text-align:justify"><a href="./trainings/completetraining_v2/02/02_05_Conversation_Designer_1019.pdf" target="_blank">Oracle Digital Assistant Conversation Designer</a>
-                                <p style="text-align:justify"><i> <a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-conversation-designer/" target="_blank">Build a Skill with the Conversation Designer (Tutorial)</a></i></p>
-                            </li>
-                        </ul>
-                        <h3>Developing Skills</h3>
-                        <p>This material covers the core skills of building skills including the basics of domain knowledge, how best to train your model, QnA, expression in dialog flows and visual components in the conversation channel.</p>
-                        <ul>
-                            <li><a href="trainings/completetraining_v2/03/03_01_Domain_Knowledge_1019.pdf">Domain knowledge for building conversational interfaces</a>
-                                <p style="text-align:justify"><i><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-skill/index.html" target="_blank">Build Your First Skill (simple starter tutorial)</a></i></p>
-                                <p style="text-align:justify"><i><a href="tutorials/build_the_perfectdigital_assistant_032019/index.html" target="_blank">Build the Perfect Digital Assistant for Your Business (Tutorial)</a></i></p>
-                            </li>
-                            <li><a href="trainings/completetraining_v2/03/03_02_Training_Your_Model_1019.pdf">Best practices in training your model</a>
-                                <p><i><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-intents/index.html">Training your model hands on tutorial</a></i></p>
-                            </li>
-                            <li><a href="trainings/completetraining_v2/03/03_03_Q&A_1019.pdf">Implementing QnA</a></li>
-                            <li><a href="trainings/completetraining_v2/03/03_04_Entities_1019.pdf">Entities</a></li>
-                            <li><a href="trainings/completetraining_v2/03/03_05_Dialog_Flow_1019.pdf">Building a conversational dialog flow</a></li>
-                            <li><a href="trainings/completetraining_v2/03/03_06_Apache_FreeMarker_1019.pdf">Using ApacheFreemarker to build richer conversations</a></li>
-                            <li><a href="trainings/completetraining_v2/03/03_07_Dynamic_Entities_1019.pdf">Understanding Dynamic Entities</a></li>
-                            <li><a href="trainings/completetraining_v2/03/03_08_Composite_Bag_Entities_1019.pdf">Real world entity extraction with composite bag</a>
-                                <p><i><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-entities/index.html">Composite bag hands on tutorial</a></i></p>
-                            </li>
-                            <li><a href="trainings/completetraining_v2/03/03_09_SystemResolveEntities_1019.pdf">Resolving entity values with system.ResolveEntities</a></li>
-                            <li><a href="trainings/completetraining_v2/03/03_10-Common_Response_Component_1019.pdf">Rich UI with the common response component</a>
-                                <p><i><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-cr-components/index.html">Common response component hands on tutorial</a></i></p>
-                            </li>
-                            <li><a href="trainings/completetraining_v2/03/03_11_Common_Response_with_compositeBagEntity_1019.pdf">Using the common response component with composite bag</a></li>
-                            <li><a href="trainings/completetraining_v2/03/03_12_Advanced_Common_Response_Component_Topics_1019.pdf">Advanced common response component</a></li>
-                        </ul>
-                        <h3>Backend Integration</h3>
-                        <p>Integrating with backend services as a key feature of a digital assistant and this is achieved through custom components. Furthermore, custom components can be used to programmatically render responses back to the user via the channel.</p>
-                        <ul>
-                            <li><a href="trainings/completetraining_v2/04/04_01_Custom_Components_Overview_1019.pdf">An overview of custom components</a>
-                                <p><i><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-cc-dev/index.html" target="_blank">Custom component development and backend integration hands on tutorial</a></i></p>
-                            </li>
-                            <li><a href="trainings/completetraining_v2/04/04_02_Custom_Components_Development1019.pdf">How to develop custom components</a></li>
-                            <li><a href="trainings/completetraining_v2/04/04_03_Custom_Components_SDK_1019.pdf">Custom component SDK</a></li>
-                            <li><a href="trainings/completetraining_v2/04/04_04_Custom_Component_Design_1019.pdf">Design practices for custom components</a></li>
-                            <li><a href="trainings/completetraining_v2/04/04_05_Custom_Components_Debugging_1019.pdf">Local debugging of custom components</a>
-                                <p><i><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/digital-assistant&id=dacth-index" target="_blank">Custom component service local debugging tutorial</a></i></p>
-                            </li>
-                            <li><a href="trainings/completetraining_v2/04/04_06_Custom_Component_Development_with_Mobile_Hub_1019.pdf">Developing custom components with Oracle Mobile Hub</a></li>
-                        </ul>
-                        <h3>Design Practices</h3>
-                        <p>This section introduces best practice designs for error handling,</p>
-                        <ul>
-                            <li><a href="trainings/completetraining_v2/05/05_01_Design_Practice_Error_Handling_1019.pdf">Error handling</a></li>
-                            <li><a href="trainings/completetraining_v2/05/05_02_Design_Practice_Unlocking_Users_1019.pdf">Preventing users becoming locked in an input loop</a></li>
-                            <li><a href="trainings/completetraining_v2/05/05_03_Design_Practice_Out_of_Order_Message_Handling_1019.pdf">Handling out of order messages</a></li>
-                            <li style="text-align:justify"><a href="trainings/completetraining_v2/05/05_04_adaptive_bot_design_0120.pdf" target="_blank">Adaptive bot response design</a></li>
-                        </ul>
-                        <h3>Digital Assistant</h3>
-                        <p>The digital assistant provide the container in which skills can be assembled. It also takes responsibility for routing user requests to the correct skills.</p>
-                        <ul>
-                            <li><a href="trainings/completetraining_v2/06/06_01_Routing_1019.pdf">How the digital assistant routes requests to skills</a>
-                                <p><i><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-routing/index.html">Tutorial: Introduction to Routing in Oracle Digital Assistant</a></i></p>
-                            </li>
-                        </ul>
-                        <h3>Other Features of ODA</h3>
-                        <p>Oracle Digital Assistant provides a range of feature to augment the functionality of skills including integration with other technologies.</p>
-                        <ul>
-                            <li><a href="trainings/completetraining_v2/07/07_01_Two_Approaches_for_Integrating_ODA_and_Service_Cloud_1019.pdf">Agent integration: The two approaches</a></li>
-                            <li><a href="trainings/completetraining_v2/07/07_02_ODA_as_an_Agent-SvC_Integration_1019.pdf">Oracle Digital Assistant as an Agent</a></li>
-                            <li><a href="trainings/completetraining_v2/07/07_03_Classic_Agent_Integration_1019.pdf">Handing off to a human via Service Cloud</a>
-                                <p><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-agent-integration/index.html"><i>Tutorial 1: Integrate a Skill with Oracle Service Cloud Live Chat</i></a></p>
-                                <p><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-agent-data/index.html"><i>Tutorial 2: Pass Customer Information to a Live Chat</i></a></p>
-                                <p style="text-align:justify"><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-agent-queue/index.html" target="_blank"><i>Tutorial 3: Transfer a Chat Session to a Live Chat Queue</i></a></p>
-                            </li>
-                            <li><a href="trainings/completetraining_v2/07/07_04_Webview_Component_1019.pdf">Instant apps: integrating Webviews in a conversation</a>
-                                <p><a href="./tutorials/webviewlocalcontainer_062019/index.html"><i>Tutorial 1: Building Webviews for Local Deployment to Oracle Digital Assistant using Oracle JET</i></a></p>
-                                <p style="text-align:justify"><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-host-vb/index.html" target="_blank"><i>Tutorial 2: Building Webviews for Local Deployment to Oracle Digital Assistant with Oracle Visual Builder</i></a></p><br>
-                                <p><a href="https://blogs.oracle.com/mobile/techexchange%3A-how-to-use-webviews-to-integrate-calls-to-remote-web-applications-in-oracle-digital-assistant-skill-conversations"><i>Article and Sample: How to Use Webviews to Integrate Remote Web Application</i></a></p>
-                            </li>
-                        </ul>
-                        <h3>Channels Support</h3>
-                        <p>Users interact with skills and digital assistants through channels such as web pages, Facebook Messenger or other channels.</p>
-                        <ul>
-                            <li><a href="trainings/completetraining_v2/08/08_01_Built_in_Channels_1019.pdf">The built-in channels in ODA</a>
-                                <p><i><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-web-channel/index.html" target="_blank">Web channel hands on tutorial</a></i></p>
-                                <p><i><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-facebook/index.html">Facebook Messenger hands on tutorial</a></i></p>
-                            </li>
-                            <li><a href="trainings/completetraining_v2/08/08_02_Webhook_1019_short.pdf">Understanding webhooks</a> </li>
-                            <li><a href="trainings/completetraining_v2/08/08_03_Oracle_Web_SDK_1019.pdf">Oracle Web SDK</a> </li>
-                            <li><a href="trainings/completetraining_v2/08/08_04_Voice_1019.pdf">Voice as a channel</a> </li>
-                            <li><a href="trainings/completetraining_v2/08/08_05_Application_Initiated_Conversation_1019.pdf">Application initiated conversations</a>
-                                <p><i><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-application-initiated/index.html" target="_blank">Application initiated conversation tutorial</a></i></p>
-                            </li>
-                            <li style="text-align:justify"><a href="trainings/completetraining_v2/14/14_02_test_framework_0120.pdf" target="_blank">Integrated test framework for conversational unit testing</a></li>
-                        </ul>
-                        <h3>Language Support</h3>
-                        <p>You can build skills that can communicate with users in the native language of the user.</p>
-                        <ul>
-                            <li><a href="trainings/completetraining_v2/09/09-01_multi_language_support_1019.pdf">Building multi-language skils</a> </li>
-                        </ul>
-                        <h3>Security</h3>
-                        <p>Security for your digital assistant includes not only understanding how your skill authenticates and authorises users, but also information must be regarded as secure.</p>
-                        <ul>
-                            <li><a href="trainings/completetraining_v2/10/10_01_oda_security_overview_1019.pdf">Security for Oracle Digital Assistant</a> </li>
-                        </ul>
-                        <h3>Insights and Analytics</h3>
-                        <p>Getting an insight into how your digital assistant and skills are performaning is a key factor for both developers and the business.</p>
-                        <ul>
-                            <li><a href="trainings/completetraining_v2/11/11_01_Bots_Insights_1019.pdf">Understanding insights</a>
-                                <p><i><a href="tutorials/botsInsights_15032019/index.html">Investigating your digital assistant performance through insights hands on tutorial</a></i></p>
-                            </li>
-                        </ul>
-                        <h3>Architecture</h3>
-                        <p>Learning about the building blocks in Oracle Digital assistant and how they relate to known pattern and principles</p>
-                        <ul>
-                            <li><a href="trainings/completetraining_v2/12/12_01_architecture_and_design_pattern_1019.pdf">Understanding architecture and design patterns</a></li>
-                        </ul>
-                        <h3>Fusion Applications</h3>
-                        <p>Understanding how you can integrate Oracle Software as a Service (SaaS) solutions with Oracle Digital Assistant</p>
-                        <ul>
-                            <li><a href="trainings/completetraining_v2/13/13_01_Extending_SaaS_Skills_1019.pdf">Extending SaaS skills</a></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2 id="section_2" role="button" style="text-align: left;"><img src="img/32_begin.png" alt="section 1" class="num_circ" width="32" height="32">Tutorials<br>
-                        </h2>
-                        <p><span style="mso-ansi-language:EN-US" lang="EN-US">
-                                Here is the full list of Oracle Digital Assistant hands on labs. Each labs is self contained and if required includes a starter skill or digital assistant.<br>
-                            </span>
-                            <h3>Overview to Routing in Oracle Digital Assistant </h3>
-                            <p style="text-align:justify">In this one-hour tutorial you will use three pre-defined skills to create your own personal digital assistant (DA) on the Oracle Digital Assistant platform (ODA). You will also get hands-on experience tuning your digital assistant’s conversational capabilities and interaction style.</p>
-                            <p><b>
-                                    <a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-routing/index.html">Tutorial: Introduction to Routing in Oracle Digital Assistant</a></b>
-                                <br> </p>
-                            <h3>Building a Simple End-to-End Skill</h3>
-                            <p style="text-align:justify">This tutorial is ideal for beginners or those new to ODA as it takes you end to end from building intents, entities, dialog flow then exposing it through a channel.&nbsp;
-                                <br> </p>
-                            <p><b><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-skill/index.html" target="_blank">Tutorial: Building a simple end to end skill</a></b>
-                                <br> </p>
-                            <h3>Build the Perfect Digital Assistant for Your Business</h3>
-                            <p style="text-align:justify">In this lab, you'll learn how to work with skills and digital assistants in Oracle Digital Assistant.
-                                <p style="text-align:justify">A skill is an individual chatbot that is focused on a specific set of capabilities (e.g. helping customers order food from a specific restaurant). A digital assistant is a master chatbot containing multiple specialized skills.</p>
-                                <p style="text-align:justify">When a user engages with the digital assistant, the digital assistant evaluates the user input and routes the conversation to the appropriate skill. You can populate your digital assistant with skills from the Skill Store and with skills you have designed yourself.</p>
-                                <p style="text-align:justify"><b><a href="tutorials/build_the_perfectdigital_assistant_032019/index.html" target="_blank">Build the Perfect Digital Assistant for Your Business (Tutorial)</a></b></p>
-                                <h3>Best Practices for Training Your Model</h3>
-                                <p style="text-align:justify">Training your model to understand language is as much an art as a science. However, to build a well functionaing language model you need to follow a number of best practices.&nbsp;
-                                    <br> </p>
-                                <p><b><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-intents/index.html">Tutorial: Best practices for training your model</a></b>
-                                    <br> </p>
-                                <h3>Real World Entity Extraction with Composite Bag</h3>
-                                <p style="text-align:justify">In this tutorial you will explore the power of the composite bag in Oracle Digital Assistant which will allow you to build powerful entity extraction conversations including validation and error handling of entity extraction.&nbsp;
-                                    <br> </p>
-                                <p><b><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-entities/index.html">Tutorial: Real world entity extraction</a></b>
-                                    <br> </p>
-                                <h3>Building a Rich User Experience with Common Response Component</h3>
-                                <p style="text-align:justify">In this tutorial you will learn how to build rich visual components to enhance the user experience.&nbsp;
-                                    <br> </p>
-                                <p><b><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-cr-components/index.html">Tutorial: Building a rich user experience with common response component</a></b>
-                                    <br> </p>
-                                <h3>Custom Component Service Development</h3>
-                                <p style="text-align:justify">Custom components are reusable units of custom code that are added to skills in Oracle Digital Assistant to be executed at runtime in the context of a user-bot conversation. Integrating remote backend systems to a chatbot conversation is the most common usecase for developers to build custom components in Oracle Digital Assistant. In this tutorial you learn how to build custom components for deployment to Oracle Digital Assistant's local Node container.</p>
-                                <p><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-cc-dev/index.html" target="_blank"><b>Custom component hands on tutorial</b></a>
-                                    <br>
-                                </p>
-                                <h3>Custom Component Service Local Debugging</h3>
-                                <p style="text-align:justify">Custom components for Oracle Digital Assistant are developed using JavaScript and Node.js. In this tutorial you learn how to debug custom component services in the context of a bot conversation in Oracle Dgital Assistant.</p>
-                                <p><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/digital-assistant&id=dacth-index" target="_blank"><b>Custom component service local debugging hands on tutorial</b></a>
-                                    <br>
-                                </p>
-                                <h3>Local and Remote Webviews</h3>
-                                <p style="text-align:justify">Using webviews, bot designers can integrate locally and remotely deployed web applications to support structured data entry into web forms, leverage existing web application capabilities, or provide UI widgets that are not present in a messenger.</p>
-                                <p><a href="./tutorials/webviewlocalcontainer_062019/index.html"><i>Tutorial 1: Building Webviews for Local Deployment to Oracle Digital Assistant using Oracle JET</i></a></p>
-                                <p style="text-align:justify"><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-host-vb/index.html" target="_blank"><i>Tutorial 2: Building Webviews for Local Deployment to Oracle Digital Assistant using Oracle Visual Builder</i></a></p>
-                                <h3>Oracle Digital Assistant Insights</h3><br>
-                                <p style="text-align:justify">Learn how Oracle Digital Asisstant Insights can help you identify problems with your Oracle Digital Assistant skills. This tutorial also shows how Insights can be used to identify and fix issues in your skill's understanding.
-                                    <br> </p>
-                                <p><b><a href="tutorials/botsInsights_15032019/index.html">Tutorial: Oracle Digital Insights</a></b>
-                                    <br> </p>
-                                <h3>Deploying Your Digital Assistant Through a Channel</h3>
-                                <p style="text-align:justify">Two tutorials that step you through deploying your digital assistant through a Web page or Facebook Messenger. &nbsp;
-                                    <br> </p>
-                                <p><b><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-web-channel/index.html" target="_blank">Tutorial: Deploying a digital assistant through a Web page </a></b>
-                                    <br> </p>
-                                <p><b><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-facebook/index.html">Facebook Messenger hands on tutorial</a></b></p>
-                                <h3>Human Agent Integration</h3>
-                                <p style="text-align:justify">In this tutorials you learn how to add live agent chat functionality to an Oracle Digital Assistant bot conversation using the Live Chat of Oracle Service Cloud. You learn how to configure service cloud and how to initiate calls to human agent support within a dialog flow.
-                                    <br> </p>
-                                <p><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-agent-integration/index.html"><b>Tutorial: Integrate a Skill with Oracle Service Cloud Live Chat</b></a></p>
-                                <p><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-agent-data/index.html"><b>Tutorial: Pass Customer Information to a Live Chat</b></a></p>
-                                <p style="text-align:justify"><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-agent-queue/index.html" target="_blank"><b>Tutorial: Transfer a Chat Session to a Live Chat Queue</b></a></p>
-                                <h3>Application Initiated Conversation</h3>
-                                <p style="text-align:justify">Oracle Digital Asisstant bot conversations can be triggered from external events. In this tutorial you learn how to start a user-bot conversation using a REST call you issue from curl or Postman. Using the same technique, bot conversations can be started from mobile and wbe applications.
-                                    <br> </p>
-                                <p><b><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/tutorial-application-initiated/index.html" target="_blank">Tutorial: Application Initiated Conversation</a></b>
-                                    <br> </p>
-                    </section>
+                <div id="bookContainer">
+                    <article>
+<!-- ########## Before You Begin ########## -->						
                         <section>
-                    <h2 id="section_1" role="button" style="text-align: left;"><img src="img/32_begin.png" alt="section 4" height="32" width="32" class="num_circ">Oracle Digital Assistant Documentation</h2>
-                            <p style="text-align:justify">There is so much more to say about Oracle Digital Assistant. You find the complete product documentation following the links below.</p>
-                    <ol>                    
-                    <li style="text-align:justify"><a href="https://bit.ly/ODADoc" target="_blank"><b>Oracle Digital Assistant Documentation</b></a></li>
-                     <li style="text-align:justify"><a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/rest-api/rest-endpoints.html" target="_blank"><b>Oracle Digital Assistant REST APIs</b></a></li>   
-                    </ol>
-                    </section>
-                    
-                    <section>
-                        <h2 id="section_3" role="button" style="text-align: left;"><img src="img/32_begin.png" alt="section 3" height="32" width="32" class="num_circ">TechExchange Blog</h2>
-                        <p style="text-align:justify">The Oracle TechExchange blog complements the Oracle Digital Assistant product documentation with in-depth hands-on experience and code samples that cover common developer tasks. The blog is aimed at bot designers and developers alike.</p>
-                        <p style="text-align:justify"><a href="https://blogs.oracle.com/mobile/tech-exchange" target="_blank"><b>Oracle TechExchange Blog</b></a></p>
-                    </section>
-                    <section>
-                        <h2 id="section_4" role="button" style="text-align: left;"><img src="img/32_begin.png" alt="section 4" class="num_circ" width="32" height="32">Video Tutorials</h2>
-                        <h3>Oracle Groundbreakers 2 Minutes Tech Tips</h3>
-                        <p style="text-align:justify">If a picture is worth a thousand words, what could a video be worth? From experience it seems to be better to show a short demo and an example instead of explaining things a hundred times or more. The Oracle Groudbreakers Blog is a VLog that collects technical tips from various product lines and technologies. Of course, we at Oracle Digital Assistant are happy to help. Click on the link below for an overview of our contribution.</p>                            
-                            <p style="text-align:justify"> <a href="videos/index.html" alt="Video tutorials" target="_blank"><figure><img src="./videos/img/videoQualty.png" alt="Oracle Digital Assistant on Oracle Groundbreakers" width="100%" height="100%"></figure><p style="text-align:justify"><b>Oracle Digital Assistant on Oracle Groundbreakers</b></a></p>
-                        <h3>Conference Sessions</h3>
-                        <p>For many, live sessions are more appealing than recoded training videos. In this section, we list conference sessions about Oracle Digital Assistant, we record during Oracle and user group events.</p>
-                        <h4>Making First Contact: Building Chatbots with Oracle Digital Assistant Technical Primer</h4>
-                        <p style="text-align:justify">In this Oracle Code event session, recorded in April 2019 in Berlin, Grant Ronald of Product Management gives you an introduction to Oracle Digital Assistant.</p>
-                        <p style="text-align:justify">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/r0oCKoqEpiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </p>
-                    </section>                   
-                    <section>
-                        <h2 id="section_1" role="button" style="text-align: left;"><img src="img/32_begin.png" alt="section 4" height="32" width="32" class="num_circ">Oracle Learning Library: Developing Chatbots</h2>
-                        <p style="text-align:justify"> This course introduces you to the world of intelligent chatbots and how you can build them quickly and easily with Oracle Mobile Cloud. You will learn how to develop a bot that understands natural human language using NLP (Natural Language Processing), enable your bot to use its intelligence as it interacts with users, integrate your bot with back end systems so that it can deliver enterprise data to users and execute tasks and introduce your bot to a potentially vast audience quickly and easily by integrating it with the Facebook Messenger platform.</p>
-                        <p style="text-align:justify"> Though this course focuses on a previous Oracle product, principles and fundamentals still applies to Oracle Digital Assistant.</p>
-                        <p style="text-align:justify"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:50:0:::50:P50_EVENT_ID,P50_COURSE_ID:5911,240" target="_blank"><b>Developing Chatbots with Oracle Mobile Cloud
-                                </b></a></p>
-                    </section>
-                    <section>
-                        <h2 id="section_1" role="button" style="text-align: left;"><img src="img/32_begin.png" alt="section 4" height="32" width="32" class="num_circ">Mobile and Chatbot Oracle certification</h2>
-                        <p style="text-align:justify"><b>Exam Title:</b> Oracle Cloud Platform Enterprise Mobile 2018 Associate Developer</p>
-                        <p style="text-align:justify"><a href="https://education.oracle.com/oracle-cloud-platform-enterprise-mobile-2018-associate-developer/pexam_1Z0-927" target="_blank"><b>Oracle Cloud Platform Enterprise Mobile 2018 Associate Developer | 1Z0-927</b></a></p>
-                    </section>
-                    <!-- ========================================================================================================================= -->
-                    <br>
-                    <!--StartFragment-->
-                    <!--EndFragment-->
-                    <br>
-                </article>
+							<h2>Before You Begin</h2>
+
+                            <p>Some steps in this tutorial have a <img src="img/copy-to-clipboard.png" alt="Copy to Cliboard" height="19px" width="19px"> icon next to them. Click this icon to copy the snippet of text to your clipboard and then paste where needed.</p>						
+							<p>Your lab facilitator will provide you the following information to access the environments used in this lab.</p>
+
+                            <h3>OIC Environment</h3>
+							<p>Select your <strong>OIC Environment</strong>:&nbsp;
+								<select data-bind="options: availableOICEnvironments,
+									optionsText: 'name',
+									value: selectedOICEnvironment,
+									optionsCaption: 'Select...'">
+								</select>
+							</p>
+                            <p><label>Enter your <a name=userNumberInput><strong>User Number</strong></a>:&nbsp;<input data-bind="value: user_number" type="text" placeholder="User Number"/></label>&nbsp;<button>OK</button></p>                         
+
+                            <p><strong>OIC URL</strong>: <code class="allow-copy"><span><em data-bind="text: selectedOICEnvironment() ? selectedOICEnvironment().url : '[Select your OIC Environment]'"></em></span></code></p>
+                            
+                            <p><strong>OIC User Name</strong>: <code class="allow-copy"><span><em data-bind="text: selectedOICEnvironment() ? selectedOICEnvironment().usernamePrefix : '[Select your OIC Environment]'"></em><em data-bind="text:user_number() || '[Enter your User Number]'"></em></span></code></p>
+                            
+                            <p>Your OIC Password will be provided by your lab facilitator.</p>
+
+                            <h3>ERP Cloud Environment</h3>
+                            <p>Select your <strong>ERP Cloud Environment</strong>:&nbsp;
+								<select data-bind="options: availableAppEnvironments,
+									optionsText: 'name',
+									value: selectedAppEnvironment,
+									optionsCaption: 'Select...'">
+								</select>
+                            </p>
+                            <p><strong>ERP Cloud URL</strong>: <code class="allow-copy"><span><em data-bind="text: selectedAppEnvironment() ? selectedAppEnvironment().url : '[Select your App Environment]'"></em></span></code></p>
+                            <p><strong>ERP Cloud User Name</strong>: <code class="allow-copy"><span><em data-bind="text: selectedAppEnvironment() ? selectedAppEnvironment().usernamePrefix : '[Select your ERP Cloud Environment]'"></em></span></code></p>
+                            <p>Your ERP Cloud Password will be provided by your lab facilitator.</p>
+						</section>
+						<hr>
+<!-- ########## Resources ########## -->
+						<section>    
+							<h2 id="section_1" role="button" style="text-align: left;">Resources</h2>
+							<p>To complete this lab, you will need to download the following additional assets:</p>
+							<ul>
+                                <li>
+                                    <div data-bind="attr: {style: user_number() ? 'display:none' : 'display:initial'}">
+                                        Please enter your user number <a href="#userNumberInput" style="color: red">above</a>  to access your download.
+                                    </div>
+                                    <div data-bind="attr: {style: user_number() ? 'display:initial' : 'display:none'}">
+                                        <a style="color: red"; href="../assets/events-lab/LetterOfCreditPortal.zip"; data-bind="attr: { download: 'LetterOfCreditPortal'.concat(user_number()) }"><span data-bind="text: 'LetterOfCreditPortal'.concat(user_number(), '.zip')">LetterOfCreditPortal.zip</span></a>
+                                    </div>                                    
+                                </li>
+								&nbsp;
+							</ul>
+						</section>
+						<hr> 						
+<!-- ########## Background ########## -->
+                        <section>
+	                        <h2>Background</h2>
+							<p>Oracle Integration provides native connectivity to Oracle and non-Oracle Software as a Service (SaaS) and On-premises applications, such as Oracle ERP Cloud, Oracle Service Cloud, HCM Cloud, Salesforce.com, Workday, EBS, SAP, NetSuite and so on. Oracle Integration adapters simplify connectivity by handling the underlying complexities of connecting to applications using industry-wide best practices. You only need to create a connection that provides minimal connectivity information for each system.</p>
+						</section>
+						<hr>
+<!-- ########## Use Case ########## -->
+                        <section>
+	                        <h2>Use Case</h2>
+							<p>This use case explores the use of Oracle Integration to subscribe to Oracle ERP Cloud Events and push the relevant event information to downstream systems. As part of the lab you would be building the below use case scenario.</p>
+							<ul>
+								<li>User creates a Purchase Order(PO) in ERP Cloud and a PO event is raised (Flow1).</li>
+								<li>Oracle Integration subscribes to the PO event, transforms and pushes the relevant information to a custom table (VBCS) (Flow1).</li>
+								<li>User attaches Letter of Credit (LOC) information to the PO record from the VBCS Web App (Flow2).</li>
+								<li>PO Record in ERP Cloud is updated with the LOC information in ERP cloud (Flow2).</li>
+							</ul>
+							<p> The following diagram illustrates the proposed interaction between the systems involved in this use case. There 2 flows to complete this use case.</p>
+
+							<p><img src="img/screenshots/integration/Purchase-Order-Real-Time-Synchronization.png" width="600px"/></p>
+						</section>
+						<hr>
+<!-- ########## Sign In ########## -->
+                        <section>    
+                            <h2 id="section_1" role="button" style="text-align: left;">Sign In</h2>
+							<p>Access to Oracle Integration is secured through Oracle Identity Cloud Service.  Users may be granted access to all the Oracle Integration environments in a cloud tenancy, or they may be restricted to specific environments. They may be assigned different roles in each environment.</p>
+
+                            <ol>
+								<li><p>Open a browser to the <strong>OIC URL</strong>.
+									<p><strong>OIC URL</strong>: <code class="allow-copy"><span><em data-bind="text: selectedOICEnvironment() ? selectedOICEnvironment().url : '[Select your OIC Environment]'"></em></span></code></p>
+								</li>
+								<li><p>Enter your <strong>OIC User Name</strong>.</p>
+									<p><strong>OIC User Name</strong>: <code class="allow-copy"><span><em data-bind="text: selectedOICEnvironment() ? selectedOICEnvironment().usernamePrefix : '[Select your OIC Environment]'"></em><em data-bind="text:user_number() || '[Enter your User Number]'"></em></span></code></p>
+								</li>
+								<li><p>Enter your <strong>OIC Password</strong> provided by your lab facilitator and click <strong>Sign In</strong>.</p>
+									<p>The <strong>Welcome</strong> page appears. Check out the tour, videos, and links to learn more. Keep scrolling to find more useful links.</p>
+								</li>
+                                <li><p>Click <strong>Home</strong>.</p>
+                                	<p>The <strong>Home</strong> page displays an overview with the current state of your instance. You can drill down to get information about available Processes, Integrations, and Visual Applications.</p><br>
+                                	<img src="img/screenshots/integration/home-page.png" width="600px"/>
+                                </li>  
+							</ol>
+							<p>You are now logged in and ready to use Oracle Integration.</p>
+                        </section>
+                        <hr>                        
+<!-- ########## Prepare Your VBCS App ########## -->
+                        <section> 
+                            <h2 id="section_2" role="button" style="text-align: left;">Prepare Your VBCS LOC App</h2>
+                            <h4 id="section_2" role="button" style="text-align: left;">Import a VBCS App</h4>
+                            <ol>
+                                <li>
+                                    <p>Download your Letter of Credit App.</p>
+                                    <div data-bind="attr: {style: user_number() ? 'display:none' : 'display:initial'}">
+                                        Please enter your user number <a href="#userNumberInput" style="color: red">above</a>  to access the download
+                                    </div>
+                                    <div data-bind="attr: {style: user_number() ? 'display:initial' : 'display:none'}">
+                                        <a style="color: red"; href="../assets/events-lab/LetterOfCreditPortal.zip"; data-bind="attr: { download: 'LetterOfCreditPortal'.concat(user_number()) }"><span data-bind="text: 'LetterOfCreditPortal'.concat(user_number(), '.zip')">LetterOfCreditPortal.zip</span></a>
+                                    </div>                                    
+                                </li>
+								<li><p>From the <strong>Home</strong> page’s <strong>Navigation menu</strong>, select <strong>Visual Builder</strong>, and then select <strong>Visual Applications</strong>.</p>
+									<p>This is where you create Visual Builder Apps. Depending on previous activity in your environment you may already have some Visual Builder Apps listed. If you do, just ignore them, we will import our own.</p>
+								</li>
+								<li>Click <strong>Import</strong>.</li>
+                                <li>Click <strong>Application from file</strong>.</li>
+								<li>Import the VBCS App you downloaded and click <strong>Import</strong>.</li>						
+                            </ol>   
+                            <h4 id="section_2" role="button" style="text-align: left;">Access the Business Object API</h4>
+                                                        <ol>
+								<li><p>Open your VBCS App.</p>
+									<p>The app contains a Web Application and several Business Objects.</p>
+                                </li>
+                                <li>Click <img src="img/bo.png" alt="Business Objects icon" style="height: 15px; width: 15px;"/> to view the Business Objects.</li>
+                                <li>Click <strong>PO</strong> to select the PO Business Object.</li>
+                                <li>Click <strong>Endpoints</strong> then expand <strong>Resource APIs</strong> to view the PO Business Object API.</li>
+                                <li><p>Click <img src="img/vbcs-copy.png" alt="Copy icon" style="height: 19px; width: 19px;"/> on <strong>Data</strong> <strong>Development</strong> to copy the the Business Object URL.</p>
+                                    <p>You will use this URL in the next section to create an Integration Connection to the Business Object API.</p>
+                                </li>
+                                <li>Click ☰ and then click <img src="img/home.png" alt="Home icon" style="height: 19px; width: 19px;"/> to return to the Oracle Integration Home page.</li>
+                            </ol>   
+                        </section>
+						<hr>
+<!-- ########## Create VBCS Connection ########## -->
+                        <section> 
+                            <h2 id="section_2" role="button" style="text-align: left;">Create the VBCS Connection</h2>
+                            <ol>
+								<li>From the <strong>Home</strong> page’s <strong>Navigation menu</strong>, select <strong>Integrations</strong>, and then select <strong>Connections</strong>.</li>
+                                <li>Click <strong>Create</strong>.</li>                                
+                                <li>Search for and select the <strong>REST</strong> Adapter, then click <strong>Select</strong>.</li>
+                                <li>In the <strong>Create New Connection</strong> dialog, in the <strong>Name</strong> field, enter <code class="allow-copy"><span>VBCS REST <em data-bind="text: user_number() ? user_number() : '[User Number]'"></em></span></code>.</li>
+                                <li>From the <strong>Role</strong> list, select <strong>Invoke</strong>.</li>
+                                <li>Click <strong>Create</strong>.</li>
+                                <li>Configure the connection properties:
+                                	<ol type="a">
+	                                	<li>From the <strong>Connection Type</strong> list, select <strong>REST API Base URL</strong>.</li>
+	                                	<li><p>In the <strong>Connection URL</strong> text field, enter the Business Object API URL and remove the "PO" at the end of the URL.</p>
+	                                		<p>For example: <code class="allow-copy"><span><em data-bind="text: selectedOICEnvironment() ? selectedOICEnvironment().baseURL : '[OIC Environment Base URL]'"></em>/ic/builder/design/LetterOfCreditPortal<em data-bind="text: user_number() ? user_number() : '[User Number]'"></em>/1.0/resources/data</span></code></p>
+	                                	</li>
+	                                	<li>Click <strong>OK</strong>.</li>
+                                	</ol>
+                                </li>
+                                <li>Configure the security:
+                                <ol type="a">
+	                                <li>From the <strong>Security Policy</strong> list, select <strong>Basic Authentication</strong>.</li>
+	                                <li>In the <strong>Username</strong> text field, enter 
+	                                <code class="allow-copy"><span><em data-bind="text: selectedOICEnvironment() ? selectedOICEnvironment().usernamePrefix : '[Select your OIC Environment]'"></em><em data-bind="text:user_number() || '[Enter your User Number]'"></em></span></code>.
+	                                </li>
+	                                <li>Click <strong>OK</strong>.</li>
+                                </ol>
+                                <li>Click <strong>Test</strong>.</li>
+                                <li>Click <strong>Save</strong>.</li>
+                            </ol>   
+                        </section>
+                        <hr>
+
+<!-- ########## PO Event Integration ########## -->
+                        <section>
+                                <h2 id="section_2" role="button" style="text-align: left;">Create the Event Integration</h2> 
+                                <h3 id="section_2" role="button" style="text-align: left;">Create an Integration</h3>
+                                <ol>
+	                                <li>On the <strong>Home</strong> page, click <strong>Integrations</strong>.</li>
+	                                <li>On the <strong>Integrations</strong> page, click <strong>Create</strong>.</li>
+	                                <li>In the <strong>Select a Style/Pattern</strong> dialog, select <strong>App Driven Orchestration</strong>.</li>
+	                                <li>On the <strong>Create New Integration</strong> dialog, configure the integration:
+	                                	<ol type="a">
+		                                	<li><p><strong>What do you want to call your integration?</strong></p>
+		                                		<p>Enter <code class="allow-copy"><spam>ERP PO Event VBCS <em data-bind="text:user_number() || '<your user number>'"></em></spam></code></p>
+		                                	</li>
+		                                	<li><strong>Identifier</strong>: leave the default value (this is the name of the integration in uppercase).</li>
+		                                	<li><p><strong>Version</strong>: leave the default value.</p>
+		                                		<p>(Optional) If you want to change the version number, use the format <code>##.##.####</code>.</p>
+		                                	</li>
+		                                	<li><p><strong>What does this integration do?</strong></p>
+		                                		<p>Enter the following text:</p>
+		                                		<p><code class="allow-copy"><span>This integration shows you how to use Oracle Integration ERP Cloud Adapter Event with the REST adapter to store a purchase order record in the VBCS PO table.</span></code></p>
+		                                	</li>
+		                                	<li><strong>Which package does this integration belong to?</strong>: leave blank.</li>
+	                                	</ol>
+	                                </li>
+	                                <li>Click <strong>Create</strong>.</li>
+                                </ol>                              
+                                <h3 id="section_2" role="button" style="text-align: left;">Create a Trigger</h3>
+                                <ol>
+	                            	<li>Hover over <strong>START</strong> and click <img src="img/add.png" alt="Add icon" style="height: 15px; width: 15px;"/>.</li>
+	                            	<li>Type <code class="allow-copy"><span>ERP</span></code> in the <strong>Search</strong> field to find your rest connection.</li>
+								<li><p>Select the connection that starts with <strong>ERP Connection</strong>.</p>
+								<p>The <strong>Configure Oracle ERP Cloud Endpoint</strong> wizard appears.</p>
+								</li>
+								<li>Name your endpoint <code class="allow-copy"><span>POEVENT</span></code>.</li>
+								<li>In the <strong>What does this endpoint do?</strong> field, enter <code class="allow-copy"><span></span>This endpoint subscribes to the purchase order events.</code></li>
+								<li>Click <strong>Next</strong>.</li>
+								<li>On the <strong>Request</strong> page, configure the request properties:
+									<ol type="a">
+										<li>From the <strong>Configure a Request</strong> options, select <strong>With Business Events</strong>.</li>
+										<li>In the <strong>Business Event For Subscription</strong> type <code class="allow-copy"><span>Purchase</span></code>.</li>
+										<li><p>Select <strong>Purchase Order Event</strong>.</p></li>
+
+										<li>
+											<div data-bind="attr: {style: user_number() ? 'display:none' : 'display:initial'}">
+												Please enter your user number <a href="#userNumberInput" style="color: red">above</a> for the next step.
+											</div>
+											<div data-bind="attr: {style: user_number() ? 'display:initial' : 'display:none'}">
+												In the <strong>Filter Expr for Purchase Order Event</strong> field, enter the following expression:
+												<pre class="allow-copy"><code><span><em data-bind="text: '&lt;xpathExpr xmlns:ns0=&#x22;http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/&#x22; xmlns:ns2=&#x22;http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/types/&#x22;&gt;$eventPayload/ns2:result/ns0:Value/ns0:PurchaseOrderLine/ns0:ItemDescription=&#x22;Lan Cable ' + user_number() + '&#x22;&lt;/xpathExpr&gt;'"></em></span></code></pre>												
+											</div>                                    
+										</li>
+										<li>Click <strong>Next</strong>.
+									</ol>
+								</li>
+								<li>On the <strong>Response</strong> page, from the <strong>Response Type</strong> options, select <strong>None</strong>.</li>
+								<li><p>Click <strong>Next</strong>.</p>
+									<p>A summary of the properties you configured appears.</p>
+								</li>
+								<li>Review the summary and click <strong>Done</strong>.</li>
+                                </ol>
+                                <h3 id="section_2" role="button" style="text-align: left;">Retrieve the Purchase Order</h3>
+                                <ol>
+	                                <li>Hover over the outgoing arrow for <strong>POEVENT</strong> and click <img src="img/add.png" alt="Add icon" style="height: 15px; width: 15px;"/>.</li>
+	                            	<li>Type <code class="allow-copy"><span>VBCS_REST_CON_<em data-bind="text:user_number() || '<your user number>'"></em></span></code> in the <strong>Search</strong> field to find your rest connection.</li>
+								<li><p>Select the REST connection that contains your user number.</p>
+									<p>The <strong>Configure REST Endpoint</strong> wizard appears.</p>
+								</li>
+								<li><p>On the <strong>Basic Info</strong> page, configure the REST endpoint:</p>
+									<ol type="a">
+										<li>Name your endpoint <code class="allow-copy"><span>GETPO</span></code>.</li>
+										<li>In the <strong>What does this endpoint do?</strong> field, enter <code class="allow-copy"><span>This endpoint retrieves the purchase order information from the Visual Builder Cloud Service tables if the purchase order exists.</code></li>
+										<li>In the <strong>relative resource URI</strong>, enter <code class="allow-copy"><span>/PO</span></code>.</li>
+										<li>In the <strong>action to perform on the endpoint</strong> field, select <strong>GET</strong>.</li>
+										<li><p>In the <strong>options that you want to configure section</strong>, select:</p>
+											<ul>
+												<li>Add and review parameters for this endpoint</li>
+												<li>Configure this endpoint to receive the response</li>
+											</ul>
+										</li>
+										<li>Click <strong>Next</strong>.</li>
+									</ol>
+								</li>
+	                            <li><p>On the <strong>Request Parameters</strong> page, add a query parameter:</p>
+	                            	<ol type="a">
+		                            	<li>Click <img src="img/add.png" alt="Add icon" style="height: 15px; width: 15px;"/>.</li>
+		                            	<li>In the <strong>Name</strong> column, enter <code>q</code>.</li>
+		                            	<li>From the list in the <strong>Data Type</strong> column, select <strong>string</strong>.</li>
+		                            	<li>Click <strong>Next</strong>.</li>
+	                            	</ol>
+	                            	<p>This query parameter will allow us to search for the purchase order, you can run a search using a query similar to: <code class="allow-copy"><span>https://<oid_host>/ic/builder/design/LetterOfCreditPortal/1.0/resources/data/PO?q=pOHeaderId=300000074157561</span></code> </p>
+	                            </li>
+	                            <li>In the <strong>Response</strong> page, configure the following values:</li>
+	                            <ol>
+		                            <li><p>From the <strong>response payload format</strong> list, select <strong>JSON Sample</strong>.</li>
+		                            <li>Click the <strong>&lt;&lt;&lt;inline&gt;&gt;&gt;</strong> link.</li>
+									<li>Enter the following JSON sample:
+											<pre class="allow-copy"><code><span>
+{
+	"items": [ 
+	{
+		"id": 24,
+		"creationDate": "2019-01-13T23:12:09+00:00", 
+		"lastUpdateDate": "2019-01-13T23:12:09.027+00:00", 
+		"createdBy": "john.doe@example.com", "lastUpdatedBy": "john.doe@example.com", 
+		"pOHeaderId": "300000074157561",
+		"orderNumber": "162180",
+		"procurementBUId": "300000046987012", 
+		"procurementBusinessUnit": "US1 Business Unit", 
+		"supplierId": "300000047414679",
+		"supplier": "Dell Inc.",
+		"soldToLegalEntity": "US1 Legal Entity",
+		"lOCId": null,
+		"links": [
+			{
+				"rel": "self",
+				"href": "https://oic_host/ic/builder/design/LetterOfCreditPortal/1.0/resources/data/PO/24", "name": "PO",
+				"kind": "item",
+				"properties": {
+					"changeIndicator": "ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A65787 000000001770400000001737200106A6176612E6C616E672E446F75626C6580B3C24A296BFB0402000144000576616C 7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078703FF000000000000078"
+					}
+				},
+				{
+					"rel": "canonical",
+					"href": "https://oic_host/ic/builder/design/LetterOfCreditPortal/1.0/resources/data/PO/24",
+					"name": "PO",
+					"kind": "item" 
+				}
+		]
+	}
+	],
+	"count": 1, 
+	"hasMore": false, 
+	"limit": 25, 
+	"offset": 0, 
+	"links": [
+		{
+			"rel": "self",
+			"href": "https://oic_host/ic/builder/design/LetterOfCreditPortal/1.0/resources/data/PO", 
+			"name": "PO",
+			"kind": "collection"
+		} 
+	]
+}                                                                   												
+											</span></code></pre>
+									</li>
+									<li>Click <strong>OK</strong>.</li>
+									<li><p>Click <strong>Next</strong>.</p>		                            
+										<p>A summary of the properties you configured appears.</p>
+									</li>
+									<li>Review the summary and click <strong>Done</strong>.</li>
+                                </ol>
+                                <h3 id="section_2" role="button" style="text-align: left;">Add the Purchase Order Mapping</h3>
+                                <ol>
+	                                <li><p>Click <strong>Map to GETPO</strong>, and then click <img src="img/edit.png" alt="Edit icon" style="height: 18px; width: 18px;"/>.</p></li>
+	                                <li>In the <strong>Target</strong> section, locate the query parameter named <code>q</code>.</li>
+	                                <li>From the <strong>Components</strong> section, drag and drop the <strong>concat</strong> function (located in the <strong>String</strong> category) to the <code>q</code> query parameter.</li>
+	                                <li>Configure the <code>concat</code> function parameters in the <strong>Expression for q</strong> panel:
+	                                	<ol type="a">
+		                                	<li>Set the first parameter to <code class="allow-copy"><span>pOHeaderId</span></code></li>
+		                                	<li>Set the second parameter to <code class="allow-copy"><span>=</span></code></li>
+		                                	<li>From the <strong>Sources</strong> section, drag the <code>POHeaderId</code> element and drop it over the <strong>concat</strong> function.</li>
+		                                	<li>In the <strong>Expression for q</strong> panel, click <img src="img/check.png" alt="Edit icon" style="height: 18px; width: 18px;"/> to save your expression.</li>
+		                                	<li>Click <strong>Validate</strong> to check for errors.</li>
+		                                	<li>Click <strong>Close</strong>.</li>
+		                                	<li>Click <strong>Save</strong>.</li>
+	                                	</ol>
+	                                </li>
+                                </ol>
+                                <h3 id="section_2" role="button" style="text-align: left;">Define a Counter Variable</h3>                               
+                            	<ol>
+                                	<li>Hover over the outgoing arrow for <strong>GETPO</strong> and click <img src="img/add.png" alt="Add icon" style="height: 15px; width: 15px;"/>.</li></li>
+                                	<li>From the <strong>Commonly Used</strong> section, click <img src="img/assign.png" alt="Assign icon" style="height: 18px; width: 18px;".</li>
+                                	<li>In the <strong>Create Action</strong> dialog, in the <strong>Name</strong> field, enter <code class="allow-copy"><span>PORecord</span></code>.</li>
+                                	<li><p>Click <strong>Create</strong>.</p>
+                                		<p>The <strong>PORecord</strong> page appears.
+                                	</li>
+                                	<li><p>Click <img src="img/add.png" alt="Add icon" style="height: 15px; width: 15px;"/> to add a new variable.</p>
+                                	<p>A new row appears in the <strong>Variables</strong> table.</p>
+                                	</li>
+                                	<li>Click the <strong>Variable</strong> column for the new row, and rename the variable to <code class="allow-copy"><span>PORecordCount</span></code>.</li>
+                                	<li>From the list in the <strong>Data Type</strong> column, select <strong>String</strong>.</li>
+                                	<li>Click <img src="img/edit.png" alt="Edit icon" style="height: 15px; width: 15px;"/> to add an expression that assigns a value to the <code>PORecordCount</code> variable.</li>
+                                	<li>In the expression builder, from the <strong>Source</strong> tree in the <strong>Input</strong> section, drag the <strong>count</strong> element and drop it over the <strong>Expression</strong> field.</li>
+                                	<li>Click <strong>Validate</strong>.</li>
+                                	<li>Click <strong>Close</strong> to close the expression builder.</li>
+                                	<li>Click <strong>Close</strong> to close the <strong>PORecord</strong> page.</li>
+                                	<li>Click <strong>Save</strong>.</li>
+								</ol>
+								<h3 id="section_2" role="button" style="text-align: left;">Create a Conditional Flow</h3>
+								<p>We will add the if-else logic for the following pseudo-code:</p>
+								<p><pre style="margin-left: 60px"><code ><span>
+search for PO record based on POHeaderID (implemented in the previous steps) 
+if (count of PORecords in VBCS) = 1
+	update existing VBCS PO Record
+else
+ 	insert a new PO Record
+								</span></code></pre></p>									                               
+                            	<ol>
+                                	<li>Hover over the outgoing arrow for <strong>PORecordActivity</strong> and click <img src="img/add.png" alt="Add icon" style="height: 15px; width: 15px;"/>.</li>
+                                	<li><p>From the <strong>Commonly Used</strong> section, click <img src="img/advanced.png" alt="Switch icon" style="height: 18px; width: 18px;"/>.</p>
+	                                	<p>A switch block appears in the <strong>Integration</strong> canvas.</p>
+	                                	<p><img src="img/screenshots/ERP/conditional-flow.png " alt="Switch block." style="width: 300px;"/></p>
+	                                	</li>
+		                            <li><p>Define the if flow (condition 1):</p>
+		                            	<ol type="a">
+			                            	<li>Select condition <strong>1 (Undefined)</strong>.</li>			                            
+			                            	<li><p>Click <img src="img/edit.png" alt="Edit icon" style="height: 15px; width: 15px;"/>.</p>
+			                            		<p>The expression builder appears.</p>
+			                            	</li>
+			                            	<li>In the <strong>Expression Name</strong> field, enter <code class="allow-copy"><span>PO record exists in VBCS</span></code>.</li>
+			                            	<li>From the <strong>Source</strong> list in the <strong>Inputs</strong>, drag the <strong>PORecordCount</strong> element and drop it over the first field of the <strong>New Condition</strong>.</li>
+			                            	<li>In the field after the equal sing in the <strong>New Condition</strong>, type <code class="allow-copy"><span>"1"</span></code></li>
+			                            	<li>Click <strong>Validate</strong>.</li>
+			                            	<li>Click <strong>Close</strong>.</li>			                            
+			                            </ol>
+			                        </li>
+			                        <li>Click <strong>Save</strong>.</li>	                            																</ol>
+		                        <h3 id="section_2" role="button" style="text-align: left;">Assign the Purchase Order ID</h3>		                    
+	                        	<ol>
+		                        	<li>Hover over the outgoing arrow for <strong>condition 1</strong> and click <img src="img/add.png" alt="Add icon" style="height: 15px; width: 15px;"/>.</li>
+	                            	<li>From the <strong>Commonly Used</strong> section, click <img src="img/assign.png" alt="Assign icon" style="height: 18px; width: 18px;"/>.</li>
+                                	<li>In the <strong>Create Action</strong> dialog, in the <strong>Name</strong> field, enter <code class="allow-copy"><span>AssignVBCSPOId</span></code>.</li>	
+                        			<li><p>Click <strong>Create</strong>.</p>
+										<p>The <strong>AssignVBCSPOId</strong> page appears.
+									</li>
+                        			<li><p>Click <img src="img/add.png" alt="Add icon" style="height: 15px; width: 15px;"/> to add a new variable.</p>
+                                	<p>A new row appears in the <strong>Variables</strong> table.</p>
+                                	</li>
+                                	<li>Click the <strong>Variable</strong> column for the new row, and rename the variable to <code class="allow-copy"><span>VBCSPOId</span></code>.</li>
+                                	<li>From the list in the <strong>Data Type</strong> column, select <strong>String</strong>.</li>
+                                	<li>Click <img src="img/edit.png" alt="Edit icon" style="height: 15px; width: 15px;"/> to add an expression that assigns a value to the <code>VBCSPOId</code> variable.</li>
+                                	<li>In the expression builder, from the <strong>Source</strong> tree in the <strong>Input</strong> section, drag the <strong>id</strong> element and drop it over the <strong>Expression</strong> field.</li>
+                                	<li>Click <strong>Validate</strong>.</li>
+                                	<li>Click <strong>Close</strong> to close the expression builder.</li>
+                                	<li>Click <strong>Close</strong> to close the <strong>AssignVBCSPOId</strong> page.</li>
+                                	<li>Click <strong>Save</strong>.</li>
+		                        </ol>
+    
+                                <h3 id="section_2" role="button" style="text-align: left;">Update the Purchase Order</h3>
+                                <ol>
+		                        	<li>Hover over the outgoing arrow for the assign action and click <img src="img/add.png" alt="Add icon" style="height: 15px; width: 15px;"/>.</li>
+		                        	<li>Select the REST connection you created earlier: <strong>VBCS_REST_CON_<em data-bind="text:user_number() || '<your user number>'"></em></strong>.
+		                        	<li><p>In the <strong>Basic Info</strong> page, configure the endpoint:</p>
+		                        		<ol type="a">
+											<li>Name your endpoint <code class="allow-copy"><span>UPDATEPO</span></code>.</li>
+											<li>In the <strong>What does this endpoint do?</strong> field, enter <code class="allow-copy"><span>This endpoint updates the purchase with the VBCS cross reference ID.</code></li>
+											<li>In the <strong>relative resource URI</strong>, enter <code class="allow-copy"><span>/PO/{ID}</span></code>.</li>
+											<li>In the <strong>action to perform on the endpoint</strong> field, select <strong>PATCH</strong>.</li>
+											<li><p>In the <strong>options that you want to configure section</strong>, select:</p>
+												<ul>
+													<li>Add and review parameters for this endpoint</li>
+													<li>Configure a request payload for this endpoint</li>
+													<li>Configure this endpoint to receive the response</li>
+												</ul>
+											</li>											
+										</ol>
+									</li>
+									<li>Click <strong>Next</strong>.</li>		                        	
+									</li>
+									<li>In the <strong>Request Parameters</strong> page, click <strong>Next</strong>.</li>
+									
+																		
+	                            <li>In the <strong>Request</strong> page, configure the following values:</li>
+	                            <ol>
+		                            <li><p>From the <strong>request payload format</strong> list, select <strong>JSON Sample</strong>.</li>
+		                            <li>Click the <strong>&lt;&lt;&lt;inline&gt;&gt;&gt;</strong> link.</li>
+									<li>Enter the following JSON sample:
+											<pre class="allow-copy"><code><span>
+{
+"orderNumber": "163521",
+"procurementBUId": "300000046987012", 
+"procurementBusinessUnit": "US1 Business Unit", 
+"supplierId": "300000047414679",
+"supplier": "Dell.",
+"soldToLegalEntity": "US1 Legal Entity",
+"lOCId": 2
+}                                                            												
+											</span></code></pre>
+									</li>									
+								</ol>
+								<li>Click <strong>Next</strong>.</li>
+								</li>	
+									
+								<li>In the <strong>Response</strong> page, configure the following values:</li>
+	                            <ol>
+		                            <li><p>From the <strong>response payload format</strong> list, select <strong>JSON Sample</strong>.</li>
+		                            <li>Click the <strong>&lt;&lt;&lt;inline&gt;&gt;&gt;</strong> link.</li>
+									<li>Enter the following JSON sample:
+											<pre class="allow-copy"><code><span>
+{
+	"id": 24,
+	"creationDate": "2019-01-13T23:12:09+00:00", 
+	"lastUpdateDate": "2019-01-22T16:46:08+00:00", 
+	"createdBy": "john.doe@example.com", 
+	"lastUpdatedBy": "john.doe@example.com", 
+	"pOHeaderId": "300000074157561", 
+	"orderNumber": "163521",
+	"procurementBUId": "300000046987012", 
+	"procurementBusinessUnit": "US1 Business Unit", 
+	"supplierId": "300000047414679",
+	"supplier": "Dell.",
+	"soldToLegalEntity": "300000046973970", 
+	"lOCId": null,
+	"links": [
+		{
+			"rel": "self",
+			"href": "https://oic_host/ic/builder/design/LetterOfCreditPortal/1.0/resources/data/PO/24",
+			"name": "PO",
+			"kind": "item",
+			"properties": {
+				"changeIndicator": 
+"ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A65787 000000001770400000001737200106A6176612E6C616E672E446F75626C6580B3C24A296BFB0402000144000576616C 7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870400000000000000078"
+			} 
+		},
+		{
+			"rel": "canonical",
+			"href": "https://oic_host/ic/builder/design/LetterOfCreditPortal/1.0/resources/data/PO/24",
+			"name": "PO",
+			"kind": "item"
+		} 
+	]
+}                                                          												
+											</span></code></pre>
+									</li>
+								</ol>
+									<li><p>Click <strong>Next</strong>.</p>
+									<p>A summary of the properties you configured appears.</p>
+									</li>
+									<li>Review the summary and click <strong>Done</strong>.</li>										
+		                        </ol>
+                                <h3 id="section_2" role="button" style="text-align: left;">Define the Update Action's Data Mapping</h3>
+                                <p>A Map action named <strong>Map to UPDATEPO</strong> is automatically created. We'll define this data mapping.</p>
+                                <ol>
+	                                <li>Select the <strong>Map to UPDATEPO</strong> action.</li>
+	                                <li><p>Click <img src="img/edit.png" alt="Edit icon" style="height: 15px; width: 15px;"/>.</p>
+			                            <p>The <strong>Data Mapping</strong> page appears.</p>
+			                        </li>			                       											                        
+									<li><p>Define the following mappings:</p>
+										<ol>
+											<li>In the <strong>Target</strong> section, expand the <strong>request-wrapper</strong> element.</li>
+					                        <li>Map the <strong>$VBCSPOId</strong> element in the <strong>Sources</strong> section, to the <strong>ID</strong> element in the <strong>Target</strong> section.</li>
+					                        <li>In the <strong>Sources</strong> section, expand the <strong>onEvent</strong> element, then expand the <strong>getPurchaseOrderResponse</strong> element, then expand the <strong>&lt;sequence&gt;</strong> element, and then expand the <strong>Value</strong> element.</li>
+											<li>In the <strong>Target</strong> section, expand the <strong>rTemplateParameters</strong> element.</li>
+											<li>Map the <strong>ProcurementBUId</strong> element in the <strong>Sources</strong> section, to the <strong>procurementBUId</strong> element in the <strong>Target</strong> section.</li>
+											<li>Map the <strong>ProcurementBusinessUnit</strong> element in the <strong>Sources</strong> section, to the <strong>procurementBusinessUnit</strong> element in the <strong>Target</strong> section.</li>
+											<li>Map the <strong>Supplier</strong> element in the <strong>Sources</strong> section, to the <strong>supplier</strong> element in the <strong>Target</strong> section.</li>
+											<li>Map the <strong>SupplierId</strong> element in the <strong>Sources</strong> section, to the <strong>supplierId</strong> element in the <strong>Target</strong> section.</li>
+											<li>In the  <strong>Sources</strong> section, expand the <strong>HeaderFlexfield</strong> element, then map the <strong>locId</strong> element to the <strong>lOCId</strong> element in the <strong>Target</strong> section.</li>
+										</ol>										                                
+									</li>
+                                    <li>Click <strong>Validate</strong>.</li>
+                                    <li>Click <strong>Close</strong>.</li>	
+                                    <li>Click <strong>Save</strong>.</li>                                
+	                            </ol>
+                                <h3 id="section_2" role="button" style="text-align: left;">Create a Purchase Order</h3>
+                                <p>Let's define the else flow.</p>
+                                <ol>
+	                                <li>Hover over the outgoing arrow for the <strong>Otherwise</strong> condition and click <img src="img/add.png" alt="Add icon" style="height: 15px; width: 15px;"/>.</li>
+		                        	<li>Select the REST connection you created earlier: <strong>VBCS_REST_CON_<em data-bind="text:user_number() || '<your user number>'"></em></strong>.
+		                        	<li><p>In the <strong>Basic Info</strong> page, configure the endpoint:</p>
+		                        		<ol type="a">
+											<li>Name your endpoint <code class="allow-copy"><span>CREATEPO</span></code>.</li>
+											<li>In the <strong>What does this endpoint do?</strong> field, enter <code class="allow-copy"><span>This endpoint creates a purchase order in Visual Builder Cloud Service.</code></li>
+											<li>In the <strong>relative resource URI</strong>, enter <code class="allow-copy"><span>/PO</span></code>.</li>
+											<li>In the <strong>action to perform on the endpoint</strong> field, select <strong>POST</strong>.</li>
+											<li><p>In the <strong>options that you want to configure section</strong>, select:</p>
+												<ul>
+													<li>Configure a request payload for this endpoint</li>
+													<li>Configure this endpoint to receive the response</li>
+												</ul>
+											</li>											
+										</ol>
+									</li>
+									<li>Click <strong>Next</strong>.</li>
+									<li>In the <strong>Request Parameters</strong> page, click <strong>Next</strong>.</li>
+									
+																		
+		                            <li>In the <strong>Request</strong> page, configure the following values:</li>
+		                            <ol>
+			                            <li><p>From the <strong>request payload format</strong> list, select <strong>JSON Sample</strong>.</li>
+			                            <li>Click the <strong>&lt;&lt;&lt;inline&gt;&gt;&gt;</strong> link.</li>
+										<li>Enter the following JSON sample:
+												<pre class="allow-copy"><code><span>
+{
+	"pOHeaderId": "300000074157551",
+	"orderNumber": "163521",
+	"procurementBUId": "300000046987012",
+	"procurementBusinessUnit": "US1 Business Unit",
+	"supplierId": "300000047414679",
+	"supplier": "Dell Inc.",
+	"soldToLegalEntity": "US1 Legal Entity"
+}	                                            												
+												</span></code></pre>
+										</li>									
+									</ol>
+									<li>Click <strong>Next</strong>.</li>
+									</li>
+									<li>In the <strong>Response</strong> page, configure the following values:</li>
+	                            <ol>
+		                            <li><p>From the <strong>response payload format</strong> list, select <strong>JSON Sample</strong>.</li>
+		                            <li>Click the <strong>&lt;&lt;&lt;inline&gt;&gt;&gt;</strong> link.</li>
+									<li>Enter the following JSON sample:
+											<pre class="allow-copy"><code><span>
+{
+	"id": 41,
+	"creationDate": "2019-01-22T17:32:24+00:00",
+	"lastUpdateDate": "2019-01-22T17:32:24.027+00:00",
+	"createdBy": "john.doe@example.com",
+	"lastUpdatedBy": "john.doe@example.com",
+	"pOHeaderId": "300000074157551",
+	"orderNumber": "163521",
+	"procurementBUId": "300000046987012",
+	"procurementBusinessUnit": "US1 Business Unit",
+	"supplierId": "300000047414679",
+	"supplier": "Dell Inc.",
+	"soldToLegalEntity": "300000046973970", 
+	"lOCId": null,
+	"links": [ 
+		{
+			"rel": "self",
+			"href": "https://oichost/ic/builder/design/LetterOfCreditPortal/1.0/resources/data/PO/41",
+			"name": "PO",
+			"kind": "item",
+			"properties": {
+				"changeIndicator": 
+"ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A657870000 00001770400000001737200106A6176612E6C616E672E446F75626C6580B3C24A296BFB0402000144000576616C75657872 00106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078703FF000000000000078"
+			} 
+		},
+		{
+			"rel": "canonical",
+			"href": "https://oichost/ic/builder/design/LetterOfCreditPortal/1.0/resources/data/PO/41", 
+			"name": "PO",
+			"kind": "item"
+		} 
+	]
+}                                              												
+											</span></code></pre>
+									</li>
+									<li><p>Click <strong>Next</strong>.</p>		                            
+										<p>A summary of the properties you configured appears.</p>
+									</li>
+									<li>Review the summary and click <strong>Done</strong>.</li>
+								</ol>	
+	                            </ol>
+                                <h3 id="section_2" role="button" style="text-align: left;">Define the Create Action's Data Mapping</h3>
+                                <p>A Map action named <strong>Map to CREATEPO</strong> is automatically created. We'll define this data mapping.</p>
+                                <ol>
+	                                <li>Select the <strong>Map to CREATEPO</strong> action.</li>
+	                                <li><p>Click <img src="img/edit.png" alt="Edit icon" style="height: 15px; width: 15px;"/>.</p>
+			                            <p>The <strong>Data Mapping</strong> page appears.</p>
+			                        </li>
+			                        <li>Map the source <code>onEvent &#9656; getPurchaseOrderResponse &#9656; result &#9656; &lt;sequence&gt; &#9656; Value &#9656; soldToLegalEntity</code> to the target <code>execute &#9656; request-wrapper &#9656; soldToLegalEntity</code>.</li>
+									<li>Click <strong>Validate</strong>.</li>
+                                    <li>Click <strong>Close</strong>.</li>	
+                                    <li>Click <strong>Save</strong>.</li>                                
+	                            </ol>
+                        </section>
+                        <hr>
+<!-- ########## Define Tracking Fields ########## -->
+                        <section>
+                                <h2 id="section_2" role="button" style="text-align: left;">Define Tracking Fields</h2>                        
+                                <ol>
+	                                <li><p>On the <strong>Integration</strong> canvas, click <img src="img/more-actions.png" alt="Actions icon" style="height: 15px; width: 15px;"/>, and then select <strong>Tracking</strong>.</p>
+	                                <p><img src="img/screenshots/ERP/tracking.png" alt="Tracking selection" style="width: 200px;"/></p>
+									</li>
+									<li><p>In the <strong>Business Identifiers for Tracking</strong> dialog, configure tracking fields to identify your instance when a purchase order is created in ERP Cloud:</p>
+										<ol type="a">
+											<li>In the <strong>Source</strong> section, select <strong>OrderNumber</strong>, and then click <img src="img/right-arrow.png" alt="Edit icon" style="height: 15px; width: 15px;"/>.</li>
+											<li>Select <strong>POHeaderId</strong>, and then click <img src="img/right-arrow.png" alt="Edit icon" style="height: 15px; width: 15px;"/>.</li>
+											<li>Select <strong>ItemDescription</strong>, and then click <img src="img/right-arrow.png" alt="Edit icon" style="height: 15px; width: 15px;"/>.</li>
+										</ol>
+										<p>The selected fields appear in the <strong>Tracking Fields</strong> table.</p>
+									</li> 
+									<li>Click <strong>Save</strong>.</li> 
+									<li>On the <strong>Integration</strong> canvas, click <strong>Save</strong>, and then click <strong>Close</strong>.</li>
+                                </ol>
+                        </section>
+                        <hr>  
+<!-- ########## Activate PO Event Integration ########## -->
+                        <section>
+                                <h2 id="section_2" role="button" style="text-align: left;">Activate the Event Integration</h2>
+                                <ol>	                              
+	                                <li>On the <strong>Integrations</strong> page, locate your integration (named <strong>ERP PO EVENT VBCS <em data-bind="text:user_number() || '<your user number>'"></em></strong>).</li>
+									<li><p>Turn on the slider button.</p>
+										<p>The <strong>Activate Integration</strong> dialog appears.</p>							
+									</li>
+									<li><p>Select the <strong>Oracle Recommends</strong> option.</p>
+										<p>This option sends your mappings to the recommendations engine which uses this information to suggest you mappings for similar integrations.</p>
+									</li>
+									<li><p>Select <strong>Enable Tracing</strong> and <strong>Include Payload</strong>.</p>
+										<p>Typically this options are disabled in production environments, but we'll enable them for the purpose of this lab.</p>
+									</li>
+									<li><p>Click <strong>Activate</strong>.</p>
+										<p>Typically the activation completes in a few seconds. If the activation succeeds a confirmation message appears at the top of the page.</p>
+									</li>
+	                            </ol>
+                        </section> 
+                        <hr>                                             
+<!-- ########## Create ERP PO ########## -->
+                        <section>
+                                <h2 id="section_2" role="button" style="text-align: left;">Create a Purchase Order in ERP Cloud</h2>
+                                <ol>
+	                                <li>Log in to the ERP Cloud as <code class="allow-copy"><span><em data-bind="text: selectedAppEnvironment() ? selectedAppEnvironment().usernamePrefix : '[Select your ERP Cloud Environment]'"></em></span></code> with the ERP Cloud credentials provided by your lab facilitator.</li>
+	                                <li>Select the <strong>Procurement</strong> tab.</li>
+	                                <li>Click <strong>Purchase Orders</strong>.</li>
+	                                <li>Select the <strong>Tasks</strong> tab.</li>
+	                                <li>Click <strong>Create Order</strong>.</li>
+	                                <li>In the <strong>Supplier</strong> field, enter <code class="allow-copy"><span>Dell Inc.</span></code>.</li>
+	                                <li>For the rest of the fields, leave the default value.</li>
+	                                <li>Click <strong>Create</strong>.</li>
+	                                <li>On the <strong>Purchase Order</strong> page, in the <strong>Additional Information</strong> section, edit the row in the <strong>Lines</strong> table and set the following values:
+	                                	<ol type="a">
+											<li><strong>Type</strong>: select <code class="allow-copy"><span>Goods</span></code>.</li>
+
+											<li>
+												<div data-bind="attr: {style: user_number() ? 'display:none' : 'display:initial'}">
+													Please enter your user number <a href="#userNumberInput" style="color: red">above</a> for the next step.
+												</div>
+												<div data-bind="attr: {style: user_number() ? 'display:initial' : 'display:none'}">
+													<strong>Description</strong>: enter <code class="allow-copy"><span><em data-bind="text: 'Lan Cable ' + user_number()"></em></span></code>.
+												</div>                                    
+											</li>
+
+		                                	<li><strong>Category Name</strong>: select <code class="allow-copy"><span>Computer Supplies</span></code>.</li>
+		                                	<li><strong>Quantity UOM</strong>: enter <code class="allow-copy"><span>1</span></code>.</li>
+		                                	<li><strong>Price</strong>: enter <code class="allow-copy"><span>5.00</span></code>.</li>
+	                                	</ol>
+	                                </li>
+	                                <li>Click <strong>Submit</strong> to create the purchase order.</li>
+	                                <li>Write down the order number.</li>
+	                                <li>Select the <strong>Tasks</strong> tab.</li>
+	                                <li>Select <strong>Manage Order</strong>.</li>
+	                                <li>Search for you order using the order number you wrote down, and then wait for the <strong>Status</strong> field to change to <strong>Open</strong>.</li>
+	                    </section>
+                        <hr>
+<!-- ########## View Tracking Information ########## -->
+                        <section>
+                                <h2 id="section_2" role="button" style="text-align: left;">Review Tracking</h2>
+                                <ol>
+	                                <li>In <strong>Oracle Integration</strong>, select <strong>Monitoring</strong> from the <strong>Navigation</strong> menu, and then select <strong>Tracking</strong>.</li>
+	                                <li>In the <strong>Search</strong> field, enter your order number.</li>
+	                                <li>Click the instance that appears as the result of the search.</li>
+									<li><p>Verify that the flow completed successfully.</p>
+										<p>Notice that because this is a new purchase order record that doesn't exist in Visual Builder Cloud Service, the condition will resolve to the <strong>Otherwise</strong> flow path.</p>
+									</li>
+									<li>Click <strong>Close</strong>.</li>
+									<li>Click <img src="img/home.png" alt="Home icon" style="height: 19px; width: 19px;"/>.</li>
+									<li>Click <strong>Visual Builder</strong>.</li>
+									<li>Select the <strong>Business Objects</strong> tab.</li>
+									<li>Click the <strong>PO</strong> object, verify that a new record was created.</li>
+	                            </ol>
+	                            <p>You just completed the first flow of this use case.</p>                           
+                        </section>
+                        <hr>
+
+<!-- ########## LOC Update Integration ########## -->
+                        <section>
+                                <h2 id="section_2" role="button" style="text-align: left;">Update the Letter of Credit</h2>
+                                <h3 id="section_2" role="button" style="text-align: left;">Create an Integration</h3>
+                                <ol>
+	                                <li>On the <strong>Home</strong> page, click <strong>Integrations</strong>.</li>
+	                                <li>On the <strong>Integrations</strong> page, click <strong>Create</strong>.</li>
+	                                <li>In the <strong>Select a Style/Pattern</strong> dialog, select <strong>App Driven Orchestration</strong>.</li>
+	                                <li>On the <strong>Create New Integration</strong> dialog, configure the integration:
+	                                	<ol type="a">
+		                                	<li><p><strong>What do you want to call your integration?</strong></p>
+		                                		<p>Enter <code class="allow-copy"><spam>ERP PO Proxy <em data-bind="text:user_number() || '<your user number>'"></em></spam></code></p>
+		                                	</li>
+		                                	<li><strong>Identifier</strong>: leave the default value (this is the name of the integration in uppercase).</li>
+		                                	<li><p><strong>Version</strong>: leave the default value.</p>
+		                                		<p>(Optional) If you want to change the version number, use the format <code>##.##.####</code>.</p>
+		                                	</li>
+		                                	<li><p><strong>What does this integration do?</strong></p>
+		                                		<p>Enter the following text:</p>
+		                                		<p><code class="allow-copy"><span>This integration shows you how to use Oracle Integration REST Adapter to create a REST to SOAP proxy for ERP Cloud web services.</span></code></p>
+		                                	</li>
+		                                	<li><strong>Which package does this integration belong to?</strong>: leave blank.</li>
+	                                	</ol>
+	                                </li>
+	                                <li>Click <strong>Create</strong>.</li>
+                                </ol>
+
+
+                                <h3 id="section_2" role="button" style="text-align: left;">Create a Trigger</h3>
+								<ol>
+	                            	<li>Hover over <strong>START</strong> and click <img src="img/add.png" alt="Add icon" style="height: 15px; width: 15px;"/>.</li>
+	                            	<li>Type <code class="allow-copy"><span>PO REST</span></code> in the <strong>Search</strong> field to find your rest connection.</li>
+								<li><p>Select the REST connection that contains your user number.</p>
+								<p>The <strong>Configure REST Endpoint</strong> wizard appears.</p>									
+								<li><p>On the <strong>Basic Info</strong> page, configure the REST endpoint:</p>
+									<ol type="a">
+										<li>Name your endpoint <code class="allow-copy"><span>POPROXY</span></code>.</li>
+										<li>In the <strong>What does this endpoint do?</strong> field, enter <code class="allow-copy"><span>This endpoint is a REST interface for the purchase order service.</span></code></li>
+										<li>In the <strong>relative resource URI</strong>, enter <code class="allow-copy"><span>/PO</span></code>.</li>
+										<li>Click <strong>Next</strong>.</li>
+									</ol>
+								</li>
+								<li><p>On the <strong>Resource Configuration</strong> page, configure the resource:</p>
+									<ol>
+										<li>Name your <strong>operation name</strong> <code class="allow-copy"><span>POPROXY</span></code>.</li>
+										<li>In the <strong>relative resource URI</strong>, enter <code class="allow-copy"><span>/PO_PROXY</span></code>.</li>
+										<li>In the <strong>action to perform on the endpoint</strong> field, select <strong>POST</strong>.</li>
+										<li><p>In the <strong>options that you want to configure section</strong>, select:</p>
+											<ul>
+												<li>Configure a request payload for this endpoint</li>
+												<li>Configure this endpoint to receive the response</li>
+											</ul>
+										</li>
+										<li>Click <strong>Next</strong>.</li>
+									</ol>
+								</li>	                             
+	                            <li>In the <strong>Request</strong> page, configure the following values:</li>
+	                            <ol>
+		                            <li><p>From the <strong>response payload format</strong> list, select <strong>JSON Sample</strong>.</li>
+		                            <li>Click the <strong>&lt;&lt;&lt;inline&gt;&gt;&gt;</strong> link.</li>
+									<li>Enter the following JSON sample:
+											<pre class="allow-copy"><code><span>
+{
+	"id": 24,
+	"lOCId": 3,
+	"orderNumber": "163521",
+	"pOHeaderId": "300000074157561",
+	"procurementBUId": "300000046987012",
+	"procurementBusinessUnit": "US1 Business Unit",
+	"soldToLegalEntity": "US1 Legal Entity", 
+	"supplier": "Dell.",
+	"supplierId": "300000047414679"
+}                                                          												
+											</span></code></pre>
+									</li>									
+                                </ol>
+								<li>In the <strong>Response</strong> page, configure the following values:</li>
+	                            <ol>
+		                            <li><p>From the <strong>response payload format</strong> list, select <strong>JSON Sample</strong>.</li>
+		                            <li>Click the <strong>&lt;&lt;&lt;inline&gt;&gt;&gt;</strong> link.</li>
+									<li>Enter the following JSON sample:
+											<pre class="allow-copy"><code><span>
+{
+	"pOHeaderId":"300000074157561", 
+	"orderNumber":"162180", 
+	"soldToLegalEntityId":"300000074157561", 
+	"changeOrderNumber":3, 
+	"requestStatus":"SUCCESS"
+}                                               												
+											</span></code></pre>
+									</li>									
+                                </ol>
+                                </li>
+								<li>Click <strong>OK</strong>.</li>
+								<li><p>Click <strong>Next</strong>.</p>		                            
+									<p>A summary of the properties you configured appears.</p>
+								</li>
+								<li><p>Review the summary and click <strong>Done</strong>.</p>
+									<p>A Request/Response Flow is created.</p>
+								</li>
+								<li>Delete the <strong>Map to POPROXY</strong> action.</li>
+								</ol>
+                                <h3 id="section_2" role="button" style="text-align: left;">Update the Purchase Order in the ERP</h3>
+                                <ol>
+	                                <li>Hover over the outgoing arrow for <strong>POPROXY</strong> and click <img src="img/add.png" alt="Add icon" style="height: 15px; width: 15px;"/>.</li>
+	                            	<li>Type <code class="allow-copy"><span>ERP Conn<em data-bind="text:user_number() || '<your user number>'"></em></span></code> in the <strong>Search</strong> field.</li>
+								<li><p>Select the connection named <strong>“ERP Conn 96 06”</strong>.</p>
+									<p>This connection was created for you for this lab.</p>
+									<p>The <strong>Configure REST Endpoint</strong> wizard appears.</p>
+								</li>
+								<li><p>On the <strong>Basic Info</strong> page, configure the REST endpoint:</p>
+									<ol type="a">
+										<li>Name your endpoint <code class="allow-copy"><span>CHANGEPO</span></code>.</li>
+										<li>In the <strong>What does this endpoint do?</strong> field, enter <code class="allow-copy"><span>This endpoint updates the purchase order.</code></li>
+									</ol>
+								</li>
+								<li><p>On the <strong>Actions</strong> page, select <strong>Query, Create, Update or Delete Information</strong>.</p>
+									<p>This is to consume the Purchase Order V2 Service.</p>
+								</li>
+								<li><p>On the <strong>Operations</strong> page:
+									</p>
+									<ol type="a">
+										<li>From the <strong>Browse by</strong> list, select <strong>Services</strong>.</li>
+										<li>In the <strong>Select a Service</strong> field, type <strong>Purchase</strong> to search for the purchase order.</li>
+										<li><p>Select <strong>PurchaseOrderService</strong>.</p>
+											<p>To confirm that you have selected the right PurchaseOrderService service, verify that the list of operations contains the operation <strong>acknowledgePurchaseOrder</strong>.</p>
+										</li>
+										<li>From the <strong>operation to perform</strong> list, select <strong>changePurchaseOrder</strong>.</li>
+										<li>Click <strong>Next</strong>.</li>
+										<li><p>Review the summary and click <strong>Done</strong>.</p>
+											<p>An action configured to invoke the <strong>changePO</strong> operation and a <strong>Map to changePO</strong> map appear on the <strong>Integration</strong> canvas. The map is empty.</p>
+										</li>										
+									</ol>
+								</li>
+                                </ol>
+                                <h3 id="section_2" role="button" style="text-align: left;">Define the ERP Purchase Order Mapping</h3>
+                                <ol>
+	                                <li>Select the <strong>Map to changePO</strong> action.</li>
+	                                <li><p>Click <img src="img/edit.png" alt="Edit icon" style="height: 15px; width: 15px;"/>.</p>
+			                            <p>The <strong>Data Mapping</strong> page appears.</p>
+			                        </li>
+									<li>In the <strong>Sources</strong> section, expand the <strong>execute</strong> element, and then expand the <strong>request-wrapper</strong> element.</li>
+									<li>In the <strong>Target</strong> section, expand the <strong>changePurchaseOrder</strong> element, and then expand the <strong>changeOrderEntry</strong> element.</li>
+									<li>Map the <strong>pOHeaderId</strong> element in the <strong>Sources</strong> section, to the <strong>pOHeaderId</strong> element in the <strong>Target</strong> section.</li>
+									<li>In the <strong>Target</strong> section, expand the <strong>changeOrderEntry</strong> element, and right-click the <strong>ChangeOrderDescription</strong> element.</li>
+									<li><p>Select <strong>Create Target Node</strong>.</p>
+										<p>The expression builder dialog appears.</p>
+									</li> 
+									<li>In the expression builder dialog, enter <code class="allow-copy"><span>‘Update of LOCId’</span></code>.</li>
+									<li>Click <img src="img/check.png" alt="Edit icon" style="height: 18px; width: 18px;"/> to save your expression.</li>
+									<li>In the <strong>Target</strong> section, expand the <strong>HeaderFlexField</strong> element.</li>
+									<li>Map the <strong>id</strong> element in the <strong>Sources</strong> section, to the <strong>customerPo</strong> element in the <strong>Target</strong> section.</li>
+									<li>Map the <strong>lOCId</strong> element in the <strong>Sources</strong> section, to the <strong>locId</strong> element in the <strong>Target</strong> section.</li>
+									<li>Click <strong>Validate</strong> to check for errors.</li>
+		                            <li>Click <strong>Close</strong>.</li>
+		                            <li>Click <strong>Save</strong>.</li>								
+                                </ol>
+                                <h3 id="section_2" role="button" style="text-align: left;">Define the Response Mapping</h3>
+                                <ol>
+	                                <li>Hover over the outgoing arrow for <strong>changePO</strong> and click <img src="img/add.png" alt="Add icon" style="height: 15px; width: 15px;"/>.</li>
+	                                <li><p>From the <strong>Actions</strong> section, select <strong>Map</strong>.</p>
+	                                	<p>The <strong>Map to POProxy</strong> action appears on the <strong>Integration</strong> canvas.</p>
+	                                </li>
+	                                <li>In the <strong>Sources</strong> section, expand the <strong>$changePO</strong> element, then expand the <strong>changePurchaseOrderResponse</strong> element, and then expand the <strong>result</strong> element.</li>
+									<li>In the <strong>Target</strong> section, expand the <strong>executeResponse</strong> element.</li>
+									<li>Map the <strong>POHeaderId</strong> element in the <strong>Sources</strong> section, to the <strong>poHeaderId</strong> element in the <strong>Target</strong> section.</li>
+									<li>Map the <strong>OrderNumber</strong> element in the <strong>Sources</strong> section, to the <strong>orderNumber</strong> element in the <strong>Target</strong> section.</li>
+									<li>Map the <strong>SoldtoLegalEntityId</strong> element in the <strong>Sources</strong> section, to the <strong>soldToLegalEntityId</strong> element in the <strong>Target</strong> section.</li>
+									<li>Map the <strong>ChangeOrderNumber</strong> element in the <strong>Sources</strong> section, to the <strong>changeOrderNumber</strong> element in the <strong>Target</strong> section.</li>
+									<li>Map the <strong>RequestStatus</strong> element in the <strong>Sources</strong> section, to the <strong>requestStatus</strong> element in the <strong>Target</strong> section.</li>
+									<li>Click <strong>Validate</strong> to check for errors.</li>
+		                            <li>Click <strong>Close</strong>.</li>
+	                            </ol>
+                        </section>
+                        <hr>
+<!-- ########## Define Tracking Fields ########## -->
+                        <section>
+                                <h2 id="section_2" role="button" style="text-align: left;">Define Tracking Fields</h2>                        
+                                <ol>
+	                                <li><p>On the <strong>Integration</strong> canvas, click <img src="img/more-actions.png" alt="Actions icon" style="height: 15px; width: 15px;"/>, and then select <strong>Tracking</strong>.</p>
+	                                <p><img src="img/screenshots/ERP/tracking.png" alt="Tracking selection" style="width: 200px;"/></p>
+									</li>
+									<li><p>In the <strong>Business Identifiers for Tracking</strong> dialog, configure tracking fields to identify your instance when a purchase order is created in ERP Cloud:</p>
+										<ol type="a">
+											<li>In the <strong>Source</strong> section, select <strong>OrderNumber</strong>, and then click <img src="img/right-arrow.png" alt="Edit icon" style="height: 15px; width: 15px;"/>.</li>
+											<li>Select <strong>id</strong>, and then click <img src="img/right-arrow.png" alt="Edit icon" style="height: 15px; width: 15px;"/>.</li>
+											<li>Select <strong>IOCid</strong>, and then click <img src="img/right-arrow.png" alt="Edit icon" style="height: 15px; width: 15px;"/>.</li>
+										</ol>
+										<p>The selected fields appear in the <strong>Tracking Fields</strong> table.</p>
+									</li> 
+									<li>Click <strong>Save</strong>.</li> 
+									<li>On the <strong>Integration</strong> canvas, click <strong>Save</strong>, and then click <strong>Close</strong>.</li>
+                                </ol>
+                        </section>                        
+<!-- ########## Activate the Integration ########## -->
+                        <section>
+                                <h2 id="section_2" role="button" style="text-align: left;">Activate the LOC Integration</h2>
+                                <ol>	                              
+	                                <li>On the <strong>Integrations</strong> page, locate your integration (named <strong>ERP PO Proxy <em data-bind="text:user_number() || '<your user number>'"></em></strong>).</li>
+									<li><p>Turn on the slider button.</p>
+										<p>The <strong>Activate Integration</strong> dialog appears.</p>							
+									</li>
+									<li><p>Select the <strong>Oracle Recommends</strong> option.</p>
+										<p>This option sends your mappings to the recommendations engine which uses this information to suggest you mappings for similar integrations.</p>
+									</li>
+									<li><p>Select <strong>Enable Tracing</strong> and <strong>Include Payload</strong>.</p>
+										<p>Typically this options are disabled in production environments, but we'll enable them for the purpose of this lab.</p>
+									</li>
+									<li><p>Click <strong>Activate</strong>.</p>
+										<p>Typically the activation completes in a few seconds. If the activation succeeds a confirmation message appears at the top of the page.</p>
+									</li>									
+	                            </ol>
+                        </section> 
+                        <hr>                               
+<!-- ##########  ########## -->
+                        <section>
+                                <h2 id="section_2" role="button" style="text-align: left;">Obtain the Swagger URL</h2>
+                                <ol>
+	                                <li><p>Click <img src="img/how-to-run.png" alt="How to run icon" style="height: 19px; width: 19px;"/> (located next to the activate slider).</p>
+										<p>A box with the a link to the endpoint metadata appears.</p></li>
+									<li><p>Open the <strong>Endpoint URL</strong> in a web browser.</p>
+										<p>The metadata page provides a detailed description for your REST endpoint.</p>
+									</li>
+									<li><p>Copy the Swagger URL from the endpoint metadata description.</p> 
+										<p>In the next section, we'll use the Swagger definition to create a service connection in the Visual Builder Cloud Service web application.</p></li>
+	                            </ol>
+                        </section>
+                        <hr>                        
+<!-- ########## Update VBCS App ########## -->
+                        <section>
+                                <h2 id="section_2" role="button" style="text-align: left;">Update the Letter of Credit App</h2>
+                                
+                                <h3 id="section_2" role="button" style="text-align: left;">Create Service Connection</h3>
+                                <ol>
+	                                <li>In <strong>Oracle Integration</strong>, click <img src="img/home.png" alt="Home icon" style="height: 19px; width: 19px;"/>.</li>
+									<li>Click <strong>Visual Builder</strong>.</li>
+									<li>From the list of applications, open the <strong>LetterOfCreditPortal<em data-bind="text:user_number() || '<your user number>'"></em></strong> web application.</li>
+									<li>If the <strong>Navigator</strong> menu isn't visible, click <img src="img/expand-navigator.png" alt="Expand Navigator icon" style="height: 19px; width: 19px;"/> located below the <strong>Navigation</strong> menu icon.</li>
+									<li>From the <strong>Navigator</strong> menu, click <img src="img/service-connections.png" alt="Service Connections icon" style="height: 19px; width: 19px;"/>.</li>
+									<li>Click the <strong>+ Service Connection</strong> button to create a new service connection that you will invoke with the click of a button.</li>
+									<li>On the <strong>Create Service Connection</strong> page, click <strong>Define by Specification</strong>.</li>
+									<li>In the <strong>Create Service Connection</strong> dialog, configure the service specification:
+									<ol type="a">
+										<li>From the <strong>API Type</strong> list, select <strong>Swagger</strong>.</li>
+										<li>From the <strong>Service Specification</strong> options, select <strong>Web Address</strong>, and then enter the swagger URL that you copied in the previous section.</li>
+										<li>In the <strong>Service Id</strong> field, enter <code class="allow-copy"><span>POPROXY</span></code>.</li>
+										<li>From the <strong>Authentication Mechanism</strong> list, select <strong>Basic</strong>.</li>
+										<li>In the <strong>Username</strong> and <strong>Password</strong> fields, enter your Oracle Integration credentials.</li>
+										<li>Click <strong>Next</strong>.</li>
+									</ol>
+									<li>In the <strong>Select Endpoints</strong> section, select <strong>PO_PROXY</strong></li>
+									<li><p>Click <strong>Create</strong>.</p>
+										<p>A connection to the endpoint is created.</p>
+									</li>
+	                            </ol>
+                                <h3 id="section_2" role="button" style="text-align: left;">Add Action</h3>
+                                <ol>
+	                                <li>From the <strong>Navigator</strong> menu, click <img src="img/web-applications.png" alt="Web Applications icon" style="height: 19px; width: 19px;"/>.</li>
+	                                <li>In the <strong>Web Apps</strong> tree, expand <strong>localapp</strong>, then expand  <strong>flows</strong>, and then expand <strong>main</strong>.</li>
+	                                <li><p>Select <strong>editopage</strong>.</p>
+	                                	<p>The <strong>editopage</strong> tab appears.</p>
+	                                </li>
+	                                <li>In the <strong>editopage</strong> tab, click <strong>Change Order</strong>.</li>
+	                                <li>In the <strong>Design</strong> pane, select the <strong>Events</strong> tab.</li>
+	                                <li>Click <strong>+ New Event</strong> and select <strong>Quick Start:'ojAction'</strong> to create a new action chain.</li>
+	                                <li>In the <strong>Id</strong> field, enter <code class="allow-copy"><span>ChangeOrderAction</span></code>.</li>	                                
+                                </ol>
+                                <h3 id="section_2" role="button" style="text-align: left;">Create the Service Connection</h3>
+                                <ol>
+	                                <li>From the <strong>Actions</strong> palette, drag <strong>Call REST Endpoint</strong> to the canvas, and drop it over <img src="img/vb-end.png" alt="End icon" style="height: 19px; width: 19px;"/>.</li>
+	                                <li>In the <strong>Call REST Endpoint</strong> pane, click <strong>Select Endpoint</strong>.</li>
+	                                <li>Configure the service connection that you created earlier.</li>
+	                                <li><p>Click <strong>Select</strong>.</p>
+	                                	<p>The endpoint is now configured to be invoked from the action chain.</p>
+	                                </li>
+	                                <li><p>Select <strong>Parameters</strong>.</p>
+	                                	<p>The mapper page appears.</p>
+	                                </li>
+	                                <li>In the <strong>Sources</strong> tree, expand <strong>Page</strong>.</li>
+	                                <li><p>Map <strong>$poRecord</strong> in the <strong>Sources</strong> section, to <strong>body</strong> in the <strong>Target</strong> section.</p>
+	                                	<p>This maps the <code>editpopage</code> page variables to the interface of the endpoint.</p>
+	                                	<p>An expression is generated based on the mapping you defined. <code>poRecord</code> is a page variable that stores the data from <code>editpopage</code>.</p>
+	                                </li>
+	                                <li><p>Click <strong>Save</strong>.</p>
+	                                	<p>The body parameter now appears marked as <strong>MAPPED</strong>.</p>
+	                                </li>
+	                                <li>From the <strong>Actions</strong> palette, drag <strong>Fire Notifications</strong> to the canvas, and drop it over <img src="img/vb-end.png" alt="End icon" style="height: 19px; width: 19px;"/>.</li>
+									<li>In the <strong>Fire Notification</strong> panel, in the <strong>Message</strong> field, enter a message.</li>
+									<li>From the <strong>Notification Type</strong> list, select <strong>info</strong>.</li>
+                                </ol>
+                        </section>
+                        <hr>                        
+<!-- ##########  ########## -->
+                        <section>
+                                <h2 id="section_2" role="button" style="text-align: left;">Run the VBCS LOC App</h2>                                                             
+                                <h3 id="section_2" role="button" style="text-align: left;">Add the PO LOC</h3>
+                                <ol>
+	                                <li><p>Click <img src="img/vb-run.png" alt="Run icon" style="height: 15px; width: 15px;"/>.</p>
+	                                	<p>The web application opens up in a separate web browser. We have provided you a basic web app for you to test the end-to-end flow.</p>
+	                                <li>
+	                                <li><p>Click <strong>LC List Page</strong>.</p> 
+	                                	<p>All the letters of credit appear in a table.</p>
+	                                </li>
+	                                <li>Click <strong>Back</strong>.</li>
+	                                <li><p>Click <strong>PO List Page</strong>.</p> 
+	                                	<p>Notice that the PO record that we created in ERP Cloud was also synchronized to Visual Builder Cloud Service.</p>
+	                                </li>
+	                                <li>Click <strong>Edit PO</strong>.</li>
+	                                <li>On the <strong>Edit PO</strong> page, from the <strong>LOC Id</strong> list, select the letter of credit ID.</li>
+	                                <li>For the rest of the fields, leave the default value.</li>
+	                                <li><p>Click <strong>Change Order</strong>.</p>
+	                                	<p>This button invokes the <code class="allow-copy"><spam>ERP PO Proxy <em data-bind="text:user_number() || '<your user number>'"></em></spam></code> Integration flow.</p>
+	                                	<p>An instance is created.</p>
+	                                </li>
+	                            </ol>
+                                <h3 id="section_2" role="button" style="text-align: left;">Review the Tracking</h3>
+                                <ol>
+	                                <li>In <strong>Oracle Integration</strong>, in the <strong>Navigation</strong> menu, select <strong>Monitoring</strong>, then select <strong>Integrations</strong>, and then select <strong>Tracking</strong>.</li>
+	                                <li>Click the <strong>Order Number</strong> and confirm that the flow was successfully completed. The flow will be gree, to indicate that it ran successfully.</li>
+	                                <li>In your web application, in the <strong>Edit PO Page</strong>, notice an information message that confirms that the payload was submitted to the Proxy Integration flow.</li>
+	                                <li><p>In <strong>Oracle Integration</strong>, in the <strong>Tracking</strong> page, notice that a new instance was created.</p>
+	                                	<p>This instance was created because when LOCId was updated in ERP Cloud, it triggered the Flow 1 again. The purchase order event is raised when creating or updating records.</p>
+	                                </li>
+	                                <li>Open the new instance, note that the if condition was true so the resulting flow updated the purchase order in Visual Builder Cloud Service.</li>
+                                </ol>
+                                <h3 id="section_2" role="button" style="text-align: left;">Review the PO LOC</h3>
+                                <ol>
+	                                <li>In <strong>Oracle Integration</strong>, in the <strong>Navigation</strong> menu, select <strong>Monitoring</strong>, then select <strong>Integrations</strong>, and then select <strong>Tracking</strong>.</li>
+	                                <li>Click the <strong>Order Number</strong> and confirm that the flow was successfully completed. The flow will be gree, to indicate that it ran successfully.</li>
+	                                <li>In your web application, in the <strong>Edit PO Page</strong>, notice an information message that confirms that the payload was submitted to the Proxy Integration flow.</li>
+	                                <li><p>In <strong>Oracle Integration</strong>, in the <strong>Tracking</strong> page, notice that a new instance was created.</p>
+	                                	<p>This instance was created because when LOCId was updated in ERP Cloud, it triggered the Flow 1 again. The purchase order event is raised when creating or updating records.</p>
+	                                </li>
+	                                <li>Open the new instance, note that the if condition was true so the resulting flow updated the purchase order in Visual Builder Cloud Service.</li>
+	                                <li>Go back to the <strong>PO List</strong> page in your web application, note that the <strong>LOCId</strong> field was updated.</li>
+                                </ol> 
+                                <p>You just finished defining and testing the second flow, an end-to-end flow to capture the purchase order events and update the corresponding letter of credit identifier in the Visual Builder Cloud Service web application.</p>  
+                        </section>                        							
+                    </article>
+                </div>
+                <br class="clearfloat">
+				<br class="clearfloat">
             </div>
-            <br class="clearfloat">
         </div>
-    </div>
-    <!--close main-->
-    <!--end content-->
-    <div class="footer-container ">
-        <div style="max-width: 994px; padding:10px 0 0 17px;">
-            <footer class="footer-list">
-                <ul>
-                    <li> <a href="https://blogs.oracle.com/mobile/tech-exchange" target="_blank">Oracle TechExchange Blog</a> </li>
-                    <li> <a href="https://www.oracle.com/corporate/index.html" target="_blank">About Oracle</a> </li>
-                    <li> <a href="https://www.oracle.com/us/legal/index.html" target="_blank">Legal Notices</a> </li>
-                    <li> <a href="https://www.oracle.com/us/legal/terms/index.html" target="_blank">Terms of Use</a> </li>
-                    <li> <a href="https://www.oracle.com/us/legal/privacy/index.html" target="_blank">Your Privacy Rights</a> </li>
-                    <li> <a href="https://www.oracle.com/pls/topic/lookup?ctx=cpyr&amp;id=en">Copyright
-
-                            © 2019, Oracle and/or its affiliates. All rights
-                            reserved.</a></li>
-                </ul>
-            </footer>
+        <!--close main--> 
+        <!--end content-->
+        <div class="footer-container ">	        
+            <div> 
+            	<img src="img/o.png" align="right" style="padding:0 40px 0 0;" alt="Oracle">
+                <footer class="footer-list">
+                    <ul>
+                        <li> <a style="color: #fefffe;" href="https://www.oracle.com/corporate/index.html" target="_blank">About Oracle</a> </li>
+                        <li> <a style="color: #fefffe;" href="https://www.oracle.com/us/corporate/contact/index.html" target="_blank">Contact Us</a> </li>
+                        <li> <a style="color: #fefffe;" href="https://www.oracle.com/us/legal/index.html" target="_blank">Legal Notices</a> </li>
+                        <li> <a style="color: #fefffe;" href="https://www.oracle.com/us/legal/terms/index.html" target="_blank">Terms of Use</a> </li>
+                        <li> <a style="color: #fefffe;" href="https://www.oracle.com/us/legal/privacy/index.html" target="_blank">Your Privacy Rights</a> </li>
+                        <li> <a style="color: #fefffe;" href="https://twitter.com/hashtag/OOW19?src=hash" target="_blank">#OOW19</a> </li>
+                        <li> <a style="color: #fefffe;" href="https://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en">Copyright © 2019, Oracle and/or its affiliates. All rights reserved.</a></li>                        
+                    </ul>
+                </footer>
+            </div>
+            <!--script type="text/javascript" src="https://www.oracleimg.com/us/assets/metrics/ora_docs.js"></script-->
         </div>
-        <script type="text/javascript" src="https://www.oracleimg.com/us/assets/metrics/ora_docs.js"></script>
-    </div>
-    <!-- OBE Dialog Box code 10/15/2018 -->
-    <!-- DO NOT ALTER THE CODE BELOW   -->
-    <!-- div id="lpModal" class="modal">
-        <!-- Modal hdr and body -->
-    <!-- div id="obe_dialog" class="modal-content">
-            <!-- div class="modal-header"> <a href="#" class="close"> <span class="close">×</span> </a>
-                <h1>Associated Learning Paths</h1>
-            <!-- /div>
-            <!-- div id="dialog-content"> </div>
-            <!-- div id="dialog-close" class="closeBtn"> <a href="#" class="close2">
-                    <p class="close2"> <span>&nbsp;&nbsp;View&nbsp;&nbsp;</span>
-                    </p>
-                </a> </div>
-        </div>
-    </div>
-    <!-- END OBE Dialog Box code -->
-</body>
-
+        <!-- OBE Dialog Box code 10/15/2018 -->
+        <!-- DO NOT ALTER THE CODE BELOW   -->
+        <!--div id="lpModal" class="modal">
+            <!-- Modal hdr and body -->
+            <!--div id="obe_dialog" class="modal-content">
+                <div class="modal-header">
+                    <a href="#" class="close">  
+                        <span class="close">&times;</span>
+                    </a>
+                    <h1>Associated Learning Paths</h1>
+                </div>
+                <div id="dialog-content" >
+                </div>
+                <div id="dialog-close" class="closeBtn">
+                    <a href="#" class="close2">  
+                        <p class="close2"> 
+                             <span>&nbsp;&nbsp;View&nbsp;&nbsp;</span> 
+                        </p>
+                    </a>  
+                </div>
+            </div>   
+        </div-->
+        <!-- END OBE Dialog Box code -->
+    </body>
 </html>
